@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz & Assessment Center - SkillSync</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="practice-labs.html" class="logo">
+                    <i class="fas fa-graduation-cap fa-lg"></i>
+                    <span>SkillSync</span>
+                </a>
+            
+            <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="learning-path.html" class="nav-link">Learning Path</a></li>
+                    <li><a href="practice-labs.html" class="nav-link">Practice Labs</a></li>
+                    <li><a href="quiz.html" class="nav-link">Quizzes</a></li>
+                    <li><a href="course-catalog.html" class="nav-link">Course Catalog</a></li>
+                </ul>
+            
+            <div class="nav-actions">
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    
+                    <div class="user-actions">
+                        <div class="user-dropdown">
+                            <div class="user-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                     alt="User Avatar">
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="profile.html" class="dropdown-item">
+                                    <i class="fas fa-user"></i> My Profile
+                                </a>
+                                <a href="settings.html" class="dropdown-item">
+                                    <i class="fas fa-cog"></i> Settings
+                                </a>
+                                <a href="notifications.html" class="dropdown-item">
+                                    <i class="fas fa-bell"></i> Notifications
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="auth.html" class="dropdown-item">
+                                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-assessment">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Validate Your Knowledge</h1>
+                <p class="hero-subtitle">Quizzes and High-Stakes Assessments</p>
+                <div class="hero-description">
+                    <p>Test your understanding with low-stakes unit quizzes or validate your mastery with high-stakes final exams and placement tests. All assessments are designed to measure true knowledge and skill.</p>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">42</div>
+                        <div class="stat-label">Quizzes Taken</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">87%</div>
+                        <div class="stat-label">Average Score</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">15</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container assessment-container">
+        <!-- My Pending Assessments Section -->
+        <section class="section pending-assessments">
+            <div class="section-header">
+                <div class="section-header-content">
+                    <h2><i class="fas fa-clock"></i> My Pending Assessments</h2>
+                    <p class="text-light">Upcoming and required assessments that need your attention</p>
+                </div>
+                <div class="section-header-badge">
+                    <span class="badge badge-danger">3 Pending</span>
+                </div>
+            </div>
+            
+            <div class="assessments-list">
+                <!-- Assessment Card 1 -->
+                <div class="assessment-card priority-high">
+                    <div class="assessment-header">
+                        <div class="assessment-badge">
+                            <span class="badge badge-danger">Final Exam</span>
+                            <span class="badge badge-warning">High Priority</span>
+                        </div>
+                        <div class="assessment-meta">
+                            <span class="meta-item">
+                                <i class="far fa-clock"></i>
+                                <span>Due: Today, 11:59 PM</span>
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-redo"></i>
+                                <span>Attempts: 0/2</span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-content">
+                        <h3>JavaScript Advanced Concepts - Final Exam</h3>
+                        <p class="course-info">Course: JavaScript Mastery • 50 Questions • 120 Minutes</p>
+                        <p class="assessment-desc">Comprehensive exam covering advanced JavaScript concepts including closures, prototypes, async programming, and design patterns.</p>
+                        
+                        <div class="assessment-progress">
+                            <div class="progress-info">
+                                <span class="progress-label">Passing Score:</span>
+                                <span class="progress-value">75% or higher</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-actions">
+                        <button class="btn btn-tertiary btn-sm" data-action="details">
+                            <i class="fas fa-info-circle"></i> Details
+                        </button>
+                        <button class="btn btn-primary" data-action="start" data-assessment="js-final">
+                            <i class="fas fa-play-circle"></i> Start Assessment
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Assessment Card 2 -->
+                <div class="assessment-card priority-medium">
+                    <div class="assessment-header">
+                        <div class="assessment-badge">
+                            <span class="badge badge-primary">Mid-Term</span>
+                            <span class="badge badge-warning">Medium Priority</span>
+                        </div>
+                        <div class="assessment-meta">
+                            <span class="meta-item">
+                                <i class="far fa-clock"></i>
+                                <span>Due: Tomorrow, 5:00 PM</span>
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-redo"></i>
+                                <span>Attempts: 1/3</span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-content">
+                        <h3>React & Redux Fundamentals</h3>
+                        <p class="course-info">Course: Modern Frontend Development • 30 Questions • 90 Minutes</p>
+                        <p class="assessment-desc">Test your understanding of React components, state management with Redux, and React hooks.</p>
+                        
+                        <div class="assessment-progress">
+                            <div class="progress-info">
+                                <span class="progress-label">Previous Attempt:</span>
+                                <span class="progress-value">65% (Failed)</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-actions">
+                        <button class="btn btn-tertiary btn-sm" data-action="details">
+                            <i class="fas fa-info-circle"></i> Details
+                        </button>
+                        <button class="btn btn-primary" data-action="start" data-assessment="react-midterm">
+                            <i class="fas fa-redo"></i> Retake Assessment
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Assessment Card 3 -->
+                <div class="assessment-card priority-low">
+                    <div class="assessment-header">
+                        <div class="assessment-badge">
+                            <span class="badge badge-success">Unit Quiz</span>
+                            <span class="badge badge-info">Low Priority</span>
+                        </div>
+                        <div class="assessment-meta">
+                            <span class="meta-item">
+                                <i class="far fa-clock"></i>
+                                <span>Due: Dec 28, 2024</span>
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-redo"></i>
+                                <span>Attempts: Unlimited</span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-content">
+                        <h3>CSS Flexbox & Grid Layout</h3>
+                        <p class="course-info">Course: Advanced CSS Techniques • 20 Questions • 45 Minutes</p>
+                        <p class="assessment-desc">Practice quiz on modern CSS layout techniques including Flexbox and CSS Grid.</p>
+                        
+                        <div class="assessment-progress">
+                            <div class="progress-info">
+                                <span class="progress-label">Passing Score:</span>
+                                <span class="progress-value">60% or higher</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-actions">
+                        <button class="btn btn-tertiary btn-sm" data-action="details">
+                            <i class="fas fa-info-circle"></i> Details
+                        </button>
+                        <button class="btn btn-secondary" data-action="start" data-assessment="css-quiz">
+                            <i class="fas fa-play-circle"></i> Take Practice Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <a href="#" class="btn-link">
+                    <i class="fas fa-chevron-right"></i> View All Pending Assessments
+                </a>
+            </div>
+        </section>
+
+        <!-- Assessment Catalog Section -->
+        <section class="section assessment-catalog">
+            <div class="section-header">
+                <div class="section-header-content">
+                    <h2><i class="fas fa-search"></i> Assessment Catalog</h2>
+                    <p class="text-light">Browse and discover available assessments and practice quizzes</p>
+                </div>
+                <div class="section-header-badge">
+                    <span class="badge badge-primary">142 Available</span>
+                </div>
+            </div>
+            
+            <!-- Filters -->
+            <div class="catalog-filters">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search assessments by title or topic..." id="assessment-search">
+                </div>
+                
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="skill-filter" class="filter-label">
+                            <i class="fas fa-tags"></i> Skill Topic
+                        </label>
+                        <select id="skill-filter" class="filter-select">
+                            <option value="all">All Topics</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="react">React & Frontend</option>
+                            <option value="node">Node.js & Backend</option>
+                            <option value="database">Database</option>
+                            <option value="devops">DevOps</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="difficulty-filter" class="filter-label">
+                            <i class="fas fa-chart-line"></i> Difficulty
+                        </label>
+                        <select id="difficulty-filter" class="filter-select">
+                            <option value="all">All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate" selected>Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="type-filter" class="filter-label">
+                            <i class="fas fa-clipboard-list"></i> Type
+                        </label>
+                        <select id="type-filter" class="filter-select">
+                            <option value="all">All Types</option>
+                            <option value="quiz">Practice Quiz</option>
+                            <option value="unit">Unit Assessment</option>
+                            <option value="midterm">Mid-Term Exam</option>
+                            <option value="final">Final Exam</option>
+                            <option value="placement">Placement Test</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn btn-outline" id="reset-filters">
+                        <i class="fas fa-redo"></i> Reset Filters
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Assessment Grid -->
+            <div class="catalog-grid" id="assessment-grid">
+                <!-- Assessment Card 1 -->
+                <div class="catalog-card" data-skill="javascript" data-difficulty="advanced" data-type="quiz">
+                    <div class="card-header">
+                        <div class="card-badge">
+                            <span class="badge badge-primary">Practice Quiz</span>
+                            <span class="badge badge-danger">Advanced</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 45 min</span>
+                            <span><i class="far fa-question-circle"></i> 25 Qs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h3>JavaScript Algorithms</h3>
+                        <p class="card-description">Test your algorithmic thinking with JavaScript challenges</p>
+                        
+                        <div class="card-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>1.2k taken</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-trophy"></i>
+                                <span>68% pass rate</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-requirements">
+                            <div class="requirement">
+                                <i class="fas fa-flag-checkered"></i>
+                                <span>Passing Score: 70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-block" data-action="practice">
+                            <i class="fas fa-play-circle"></i> Take Practice Quiz
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Assessment Card 2 -->
+                <div class="catalog-card" data-skill="react" data-difficulty="intermediate" data-type="unit">
+                    <div class="card-header">
+                        <div class="card-badge">
+                            <span class="badge badge-warning">Unit Assessment</span>
+                            <span class="badge badge-warning">Intermediate</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 60 min</span>
+                            <span><i class="far fa-question-circle"></i> 30 Qs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h3>React Hooks & Context API</h3>
+                        <p class="card-description">Master modern React patterns with hooks and context</p>
+                        
+                        <div class="card-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>845 taken</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-trophy"></i>
+                                <span>72% pass rate</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-requirements">
+                            <div class="requirement">
+                                <i class="fas fa-flag-checkered"></i>
+                                <span>Passing Score: 65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-block" data-action="practice">
+                            <i class="fas fa-play-circle"></i> Start Assessment
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Assessment Card 3 -->
+                <div class="catalog-card" data-skill="database" data-difficulty="beginner" data-type="quiz">
+                    <div class="card-header">
+                        <div class="card-badge">
+                            <span class="badge badge-success">Practice Quiz</span>
+                            <span class="badge badge-success">Beginner</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 30 min</span>
+                            <span><i class="far fa-question-circle"></i> 20 Qs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h3>SQL Fundamentals</h3>
+                        <p class="card-description">Basic SQL queries, joins, and database concepts</p>
+                        
+                        <div class="card-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>2.1k taken</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-trophy"></i>
+                                <span>85% pass rate</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-requirements">
+                            <div class="requirement">
+                                <i class="fas fa-flag-checkered"></i>
+                                <span>Passing Score: 60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-block" data-action="practice">
+                            <i class="fas fa-play-circle"></i> Take Practice Quiz
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Assessment Card 4 -->
+                <div class="catalog-card" data-skill="node" data-difficulty="advanced" data-type="final">
+                    <div class="card-header">
+                        <div class="card-badge">
+                            <span class="badge badge-danger">Final Exam</span>
+                            <span class="badge badge-danger">Advanced</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 120 min</span>
+                            <span><i class="far fa-question-circle"></i> 50 Qs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h3>Node.js Backend Architecture</h3>
+                        <p class="card-description">Comprehensive exam on Node.js, Express, and backend patterns</p>
+                        
+                        <div class="card-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>512 taken</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-trophy"></i>
+                                <span>55% pass rate</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-requirements">
+                            <div class="requirement">
+                                <i class="fas fa-flag-checkered"></i>
+                                <span>Passing Score: 75%</span>
+                            </div>
+                            <div class="requirement">
+                                <i class="fas fa-certificate"></i>
+                                <span>Certificate Awarded</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-block" data-action="details">
+                            <i class="fas fa-info-circle"></i> View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Assessment Card 5 -->
+                <div class="catalog-card" data-skill="devops" data-difficulty="intermediate" data-type="placement">
+                    <div class="card-header">
+                        <div class="card-badge">
+                            <span class="badge badge-info">Placement Test</span>
+                            <span class="badge badge-warning">Intermediate</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 90 min</span>
+                            <span><i class="far fa-question-circle"></i> 40 Qs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h3>DevOps & CI/CD Pipeline</h3>
+                        <p class="card-description">Determine your skill level in modern DevOps practices</p>
+                        
+                        <div class="card-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>328 taken</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-trophy"></i>
+                                <span>61% pass rate</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-requirements">
+                            <div class="requirement">
+                                <i class="fas fa-flag-checkered"></i>
+                                <span>Placement Score</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-block" data-action="practice">
+                            <i class="fas fa-play-circle"></i> Start Placement Test
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Assessment Card 6 -->
+                <div class="catalog-card" data-skill="javascript" data-difficulty="beginner" data-type="quiz">
+                    <div class="card-header">
+                        <div class="card-badge">
+                            <span class="badge badge-success">Practice Quiz</span>
+                            <span class="badge badge-success">Beginner</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 25 min</span>
+                            <span><i class="far fa-question-circle"></i> 15 Qs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h3>JavaScript Basics</h3>
+                        <p class="card-description">Fundamental JavaScript concepts and syntax</p>
+                        
+                        <div class="card-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>3.5k taken</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-trophy"></i>
+                                <span>92% pass rate</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-requirements">
+                            <div class="requirement">
+                                <i class="fas fa-flag-checkered"></i>
+                                <span>Passing Score: 50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-block" data-action="practice">
+                            <i class="fas fa-play-circle"></i> Take Practice Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-outline1" id="load-more">
+                    <i class="fas fa-plus-circle"></i> Load More Assessments
+                </button>
+            </div>
+        </section>
+
+        <!-- My Results & History Section -->
+        <section class="section results-history">
+            <div class="section-header">
+                <div class="section-header-content">
+                    <h2><i class="fas fa-history"></i> My Results & History</h2>
+                    <p class="text-light">Track your assessment performance and review past attempts</p>
+                </div>
+                <div class="section-header-badge">
+                    <span class="badge badge-primary">42 Completed</span>
+                </div>
+            </div>
+            
+            <!-- Results Filters -->
+            <div class="results-filters">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Results</button>
+                    <button class="filter-tab" data-filter="passed">Passed</button>
+                    <button class="filter-tab" data-filter="failed">Failed</button>
+                    <button class="filter-tab" data-filter="recent">Recent</button>
+                </div>
+                
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="sort-results" class="filter-label">
+                            <i class="fas fa-sort-amount-down"></i> Sort By
+                        </label>
+                        <select id="sort-results" class="filter-select">
+                            <option value="recent">Most Recent</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="score-high">Highest Score</option>
+                            <option value="score-low">Lowest Score</option>
+                            <option value="name">Assessment Name</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Results Table -->
+            <div class="table-container">
+                <table class="results-table" id="results-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <button class="sortable-header" data-sort="name">
+                                    Assessment Name <i class="fas fa-sort"></i>
+                                </button>
+                            </th>
+                            <th>
+                                <button class="sortable-header" data-sort="date">
+                                    Date Taken <i class="fas fa-sort"></i>
+                                </button>
+                            </th>
+                            <th>
+                                <button class="sortable-header" data-sort="score">
+                                    Score <i class="fas fa-sort"></i>
+                                </button>
+                            </th>
+                            <th>
+                                <button class="sortable-header" data-sort="status">
+                                    Status <i class="fas fa-sort"></i>
+                                </button>
+                            </th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="result-item passed">
+                            <td>
+                                <div class="result-name">
+                                    <strong>JavaScript Advanced Concepts - Final Exam</strong>
+                                    <small>Course: JavaScript Mastery</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="result-date">
+                                    <span>Dec 15, 2024</span>
+                                    <small>2:30 PM</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="result-score">
+                                    <span class="score-value">92%</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge success">
+                                    <i class="fas fa-check-circle"></i> Passed
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-tertiary" data-action="review">
+                                    <i class="fas fa-chart-bar"></i> Review Results
+                                </button>
+                            </td>
+                        </tr>
+                        
+                        <tr class="result-item failed">
+                            <td>
+                                <div class="result-name">
+                                    <strong>React & Redux Fundamentals</strong>
+                                    <small>Course: Modern Frontend Development</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="result-date">
+                                    <span>Dec 10, 2024</span>
+                                    <small>11:15 AM</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="result-score">
+                                    <span class="score-value">65%</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge danger">
+                                    <i class="fas fa-times-circle"></i> Failed
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-tertiary" data-action="review">
+                                    <i class="fas fa-chart-bar"></i> Review Results
+                                </button>
+                            </td>
+                        </tr>
+                        
+                        <tr class="result-item passed">
+                            <td>
+                                <div class="result-name">
+                                    <strong>Node.js Backend Architecture</strong>
+                                    <small>Course: Backend Development</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="result-date">
+                                    <span>Dec 5, 2024</span>
+                                    <small>4:45 PM</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="result-score">
+                                    <span class="score-value">88%</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge success">
+                                    <i class="fas fa-check-circle"></i> Passed
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-tertiary" data-action="review">
+                                    <i class="fas fa-chart-bar"></i> Review Results
+                                </button>
+                            </td>
+                        </tr>
+                        
+                        <tr class="result-item passed">
+                            <td>
+                                <div class="result-name">
+                                    <strong>Database Design & Optimization</strong>
+                                    <small>Course: Database Management</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="result-date">
+                                    <span>Nov 28, 2024</span>
+                                    <small>10:30 AM</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="result-score">
+                                    <span class="score-value">95%</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge success">
+                                    <i class="fas fa-check-circle"></i> Passed
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-tertiary" data-action="review">
+                                    <i class="fas fa-chart-bar"></i> Review Results
+                                </button>
+                            </td>
+                        </tr>
+                        
+                        <tr class="result-item passed">
+                            <td>
+                                <div class="result-name">
+                                    <strong>Cloud Infrastructure Basics</strong>
+                                    <small>Course: DevOps Fundamentals</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="result-date">
+                                    <span>Nov 20, 2024</span>
+                                    <small>3:15 PM</small>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="result-score">
+                                    <span class="score-value">78%</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" style="width: 78%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge success">
+                                    <i class="fas fa-check-circle"></i> Passed
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-tertiary" data-action="review">
+                                    <i class="fas fa-chart-bar"></i> Review Results
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="section-footer">
+                <a href="#" class="btn-link">
+                    <i class="fas fa-download"></i> Export All Results (CSV)
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Learning</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Certifications</a></li>
+                        <li><a href="#">Skills Assessment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">System Status</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" width="20" height="20" fill="white">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                        <path d="M2 17L12 22L22 17" fill="none" stroke="white" stroke-width="2"/>
+                        <path d="M2 12L12 17L22 12" fill="none" stroke="white" stroke-width="2"/>
+                    </svg>
+                    <span>SkillSync</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2024 SkillSync. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Assessment Authorization Modal -->
+    <div class="overlay" id="auth-modal" data-modal-overlay="auth">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Start Assessment</h3>
+                <button class="btn-link" data-modal-close>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <h4>Ready to begin?</h4>
+                <div class="assessment-info">
+                    <p><strong>Assessment:</strong> <span id="modal-assessment-name">JavaScript Advanced Concepts - Final Exam</span></p>
+                    <p><strong>Duration:</strong> <span id="modal-duration">120 minutes</span></p>
+                    <p><strong>Questions:</strong> <span id="modal-questions">50 questions</span></p>
+                    <p><strong>Attempts Remaining:</strong> <span id="modal-attempts">2 attempts</span></p>
+                </div>
+                
+                <div class="assessment-rules">
+                    <h5>Assessment Rules:</h5>
+                    <ul class="rules-list">
+                        <li><i class="fas fa-ban"></i> No switching to other tabs/windows</li>
+                        <li><i class="fas fa-clock"></i> Timer will continue if you leave</li>
+                        <li><i class="fas fa-save"></i> Progress is auto-saved</li>
+                        <li><i class="fas fa-redo"></i> You cannot pause once started</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" data-modal-close>Cancel</button>
+                    <button class="btn btn-primary" id="confirm-start">Start Assessment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assessment Interface Modal -->
+    <div class="overlay" id="assessment-interface" data-modal-overlay="assessment">
+        <div class="modal modal-full">
+            <div class="assessment-header">
+                <div class="assessment-header-content">
+                    <div class="assessment-timer">
+                        <i class="fas fa-clock"></i>
+                        <span id="timer">59:45</span>
+                    </div>
+                    <div class="assessment-progress">
+                        <span>Question <span id="current-question">1</span> of <span id="total-questions">25</span></span>
+                    </div>
+                </div>
+                <button class="btn-link" data-modal-close>
+                    <i class="fas fa-times"></i> Exit Assessment
+                </button>
+            </div>
+            
+            <div class="assessment-body">
+                <div class="question-navigation">
+                    <div class="navigation-header">
+                        <h4>Questions</h4>
+                        <div class="navigation-stats">
+                            <span class="answered">12</span> answered •
+                            <span class="unanswered">13</span> remaining
+                        </div>
+                    </div>
+                    <div class="navigation-grid" id="question-grid">
+                        <!-- Question numbers will be generated by JS -->
+                    </div>
+                </div>
+                
+                <div class="question-area">
+                    <div class="question-header">
+                        <h3 id="question-title">Question 1</h3>
+                        <div class="question-meta">
+                            <span class="difficulty">Medium</span>
+                            <span class="points">2 points</span>
+                        </div>
+                    </div>
+                    
+                    <div class="question-content">
+                        <p id="question-text">What is the output of the following JavaScript code?</p>
+                        <div class="code-snippet">
+                            <pre><code>console.log(typeof null);
+console.log(typeof undefined);
+console.log(null === undefined);</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="answer-options" id="answer-options">
+                        <!-- Options will be generated by JS -->
+                    </div>
+                    
+                    <div class="question-actions">
+                        <button class="btn btn-outline" id="prev-question">
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <div class="action-center">
+                            <button class="btn btn-tertiary" id="flag-question">
+                                <i class="far fa-flag"></i> Flag for Review
+                            </button>
+                            <button class="btn btn-secondary" id="clear-answer">
+                                <i class="fas fa-eraser"></i> Clear Answer
+                            </button>
+                        </div>
+                        <button class="btn btn-primary" id="next-question">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="assessment-footer">
+                <div class="footer-left">
+                    <button class="btn btn-outline" id="review-all">
+                        <i class="fas fa-list"></i> Review All Questions
+                    </button>
+                </div>
+                <div class="footer-center">
+                    <div class="completion-status">
+                        <div class="status-item">
+                            <span class="status-dot answered"></span>
+                            <span>Answered</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot unanswered"></span>
+                            <span>Unanswered</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot flagged"></span>
+                            <span>Flagged</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <button class="btn btn-danger" id="submit-assessment">
+                        <i class="fas fa-paper-plane"></i> Submit Assessment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Review Modal -->
+    <div class="overlay" id="results-modal" data-modal-overlay="results">
+        <div class="modal modal-lg">
+            <div class="modal-header">
+                <h3>Assessment Results</h3>
+                <button class="btn-link" data-modal-close>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="results-summary">
+                    <div class="summary-card">
+                        <div class="summary-icon success">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="summary-content">
+                            <h4>Overall Score</h4>
+                            <div class="summary-score">92%</div>
+                            <div class="summary-status">
+                                <span class="status-badge success">Passed</span>
+                                <span class="score-compare">+17% above average</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="item-label">Time Taken</div>
+                            <div class="item-value">45:30 / 60:00</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="item-label">Questions</div>
+                            <div class="item-value">25 / 25 answered</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="item-label">Correct</div>
+                            <div class="item-value success">23 questions</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="item-label">Incorrect</div>
+                            <div class="item-value danger">2 questions</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-breakdown">
+                    <h4>Performance by Category</h4>
+                    <div class="breakdown-chart">
+                        <div class="chart-item">
+                            <div class="chart-label">JavaScript Basics</div>
+                            <div class="chart-bar">
+                                <div class="chart-fill" style="width: 95%"></div>
+                            </div>
+                            <div class="chart-value">95%</div>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-label">Advanced Concepts</div>
+                            <div class="chart-bar">
+                                <div class="chart-fill" style="width: 90%"></div>
+                            </div>
+                            <div class="chart-value">90%</div>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-label">Async Programming</div>
+                            <div class="chart-bar">
+                                <div class="chart-fill" style="width: 88%"></div>
+                            </div>
+                            <div class="chart-value">88%</div>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-label">Design Patterns</div>
+                            <div class="chart-bar">
+                                <div class="chart-fill" style="width: 85%"></div>
+                            </div>
+                            <div class="chart-value">85%</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-review">
+                    <h4>Review Questions</h4>
+                    <div class="review-tabs">
+                        <button class="review-tab active" data-review="incorrect">Incorrect (2)</button>
+                        <button class="review-tab" data-review="flagged">Flagged (3)</button>
+                        <button class="review-tab" data-review="all">All Questions</button>
+                    </div>
+                    
+                    <div class="review-questions">
+                        <!-- Question review will be loaded here -->
+                        <div class="review-question">
+                            <div class="question-header">
+                                <span class="question-number">Question 7</span>
+                                <span class="question-status incorrect">Incorrect</span>
+                            </div>
+                            <p class="question-text">Which method creates a new array with all sub-array elements concatenated?</p>
+                            <div class="answer-review">
+                                <div class="answer correct">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>flat()</span>
+                                </div>
+                                <div class="answer user-answer incorrect">
+                                    <i class="fas fa-times-circle"></i>
+                                    <span>concat()</span>
+                                </div>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="btn btn-outline" data-modal-close>Close</button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download Report
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/quiz.js"></script>
+    <script>
+        // Simple JavaScript for basic interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set active nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === 'quiz.html') {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

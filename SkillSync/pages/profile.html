@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - SkillSync</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ==================== HEADER SECTION ==================== -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="dashboard.html" class="logo">
+                    <i class="fas fa-graduation-cap fa-lg"></i>
+                    <span>SkillSync</span>
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="learning-path.html" class="nav-link">Learning Path</a></li>
+                    <li><a href="practice-labs.html" class="nav-link">Practice Labs</a></li>
+                    <li><a href="quiz.html" class="nav-link">Quizzes</a></li>
+                    <li><a href="course-catalog.html" class="nav-link">Course Catalog</a></li>
+                </ul>
+
+                <!-- Navigation Actions -->
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    
+                    <div class="user-actions">
+                        <div class="user-dropdown">
+                            <div class="user-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                     alt="User Avatar">
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="profile.html" class="dropdown-item">
+                                    <i class="fas fa-user"></i> My Profile
+                                </a>
+                                <a href="settings.html" class="dropdown-item">
+                                    <i class="fas fa-cog"></i> Settings
+                                </a>
+                                <a href="notifications.html" class="dropdown-item">
+                                    <i class="fas fa-bell"></i> Notifications
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="auth.html" class="dropdown-item">
+                                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <div class="hero-profile">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-avatar">
+                    <div class="avatar-container" id="hero-avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" 
+                             alt="Profile Avatar">
+                        <button class="avatar-edit" id="hero-avatar-edit">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                </div>
+                <h1 class="hero-title">Welcome back, <span id="user-name">Jerrick</span></h1>
+                <p class="hero-subtitle">Premium Member • 42 Courses Completed • Level 8</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">85%</div>
+                        <div class="stat-label">Profile Complete</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">128</div>
+                        <div class="stat-label">Learning Hours</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Certificates</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container profile-container">
+        <div class="profile-layout">
+            <!-- Profile Navigation Sidebar -->
+            <aside class="profile-sidebar" id="profile-sidebar">
+                <div class="sidebar-header">
+                    <h3>Profile Settings</h3>
+                    <p class="text-light">Manage your account</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#account-settings" class="sidebar-link active" data-section="account">
+                        <div class="sidebar-link-icon">
+                            <i class="fas fa-user-cog"></i>
+                        </div>
+                        <div class="sidebar-link-content">
+                            <span>Account Settings</span>
+                            <small>Personal information</small>
+                        </div>
+                        <i class="fas fa-chevron-right sidebar-link-arrow"></i>
+                    </a>
+                    <a href="#public-profile" class="sidebar-link" data-section="public">
+                        <div class="sidebar-link-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="sidebar-link-content">
+                            <span>Public Profile</span>
+                            <small>Social visibility</small>
+                        </div>
+                        <i class="fas fa-chevron-right sidebar-link-arrow"></i>
+                    </a>
+                    <a href="#billing" class="sidebar-link" data-section="billing">
+                        <div class="sidebar-link-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="sidebar-link-content">
+                            <span>Billing & Subscription</span>
+                            <small>Payment methods</small>
+                        </div>
+                        <i class="fas fa-chevron-right sidebar-link-arrow"></i>
+                    </a>
+                    <a href="#notifications" class="sidebar-link" data-section="notifications">
+                        <div class="sidebar-link-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="sidebar-link-content">
+                            <span>Notifications</span>
+                            <small>Alert preferences</small>
+                        </div>
+                        <i class="fas fa-chevron-right sidebar-link-arrow"></i>
+                    </a>
+                    <a href="#security" class="sidebar-link" data-section="security">
+                        <div class="sidebar-link-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="sidebar-link-content">
+                            <span>Security</span>
+                            <small>Privacy & data</small>
+                        </div>
+                        <i class="fas fa-chevron-right sidebar-link-arrow"></i>
+                    </a>
+                    <div class="sidebar-divider"></div>
+                    <a href="#" class="sidebar-link sidebar-link-logout" id="sidebar-logout">
+                        <div class="sidebar-link-icon">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </div>
+                        <div class="sidebar-link-content">
+                            <span>Sign Out</span>
+                            <small>End current session</small>
+                        </div>
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Profile Content Area -->
+            <div class="profile-content">
+                <!-- Account Settings Section -->
+                <section class="profile-section active" id="account-settings">
+                    <div class="section-header">
+                        <div class="section-header-content">
+                            <h2><i class="fas fa-user-cog"></i> Account Settings</h2>
+                            <p class="text-light">Update your personal information and preferences</p>
+                        </div>
+                        <div class="section-header-badge">
+                            <span class="badge badge-primary">Required</span>
+                        </div>
+                    </div>
+                    
+                    <form class="profile-form" id="account-form">
+                        <div class="form-grid">
+                            <div class="form-card">
+                                <label for="full-name" class="form-label">
+                                    <i class="fas fa-user"></i> Full Name
+                                </label>
+                                <input type="text" id="full-name" class="form-control form-control-icon" 
+                                       value="Jerrick" placeholder="Enter your full name">
+                                <small class="form-hint">Your name as it appears on your account</small>
+                            </div>
+                            
+                            <div class="form-card">
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope"></i> Email Address
+                                </label>
+                                <input type="email" id="email" class="form-control form-control-icon" 
+                                       value="john.doe@example.com" placeholder="Enter your email">
+                                <small class="form-hint">We'll send important updates to this email</small>
+                            </div>
+                            
+                            <div class="form-card">
+                                <label class="form-label">
+                                    <i class="fas fa-lock"></i> Password Security
+                                </label>
+                                <div class="password-security">
+                                    <div class="security-status">
+                                        <span class="security-text">Last changed: 2 months ago</span>
+                                    </div>
+                                    <button type="button" class="btn btn-tertiary btn-sm" id="change-password">
+                                        <i class="fas fa-key"></i> Change Password
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-card">
+                                <label for="timezone" class="form-label">
+                                    <i class="fas fa-clock"></i> Time Zone
+                                </label>
+                                <div class="select-wrapper">
+                                    <select id="timezone" class="form-control">
+                                        <option value="est">Eastern Time (ET)</option>
+                                        <option value="cst">Central Time (CT)</option>
+                                        <option value="mst">Mountain Time (MT)</option>
+                                        <option value="pst" selected>Pacific Time (PT)</option>
+                                        <option value="gmt">GMT (UTC+0)</option>
+                                    </select>
+                                </div>
+                                <small class="form-hint">Affects due dates and notifications</small>
+                            </div>
+                            
+                            <div class="form-card">
+                                <label for="language" class="form-label">
+                                    <i class="fas fa-language"></i> Language
+                                </label>
+                                <div class="select-wrapper">
+                                    <select id="language" class="form-control">
+                                        <option value="en" selected>English</option>
+                                        <option value="es">Spanish</option>
+                                        <option value="fr">French</option>
+                                        <option value="de">German</option>
+                                        <option value="jp">Japanese</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-card">
+                                <label for="job-title" class="form-label">
+                                    <i class="fas fa-briefcase"></i> Job Title
+                                </label>
+                                <input type="text" id="job-title" class="form-control form-control-icon" 
+                                       value="Full Stack Developer" placeholder="Enter your job title">
+                                <small class="form-hint">Helps us personalize your experience</small>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="action-hint">
+                                <i class="fas fa-info-circle"></i>
+                                <span>All changes are saved automatically</span>
+                            </div>
+                            <div class="action-buttons">
+                                <button type="button" class="btn btn-outline" id="reset-account">
+                                    <i class="fas fa-undo"></i> Reset Changes
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-save">
+                                    <i class="fas fa-save"></i> Save Changes
+                                    <span class="btn-loader"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Public Profile Section -->
+                <section class="profile-section" id="public-profile">
+                    <div class="section-header">
+                        <div class="section-header-content">
+                            <h2><i class="fas fa-globe"></i> Public Profile</h2>
+                            <p class="text-light">Control what information is visible to others</p>
+                        </div>
+                        <div class="section-header-badge">
+                            <span class="badge badge-success">Public</span>
+                        </div>
+                    </div>
+                    
+                    <form class="profile-form" id="public-form">
+                        <div class="profile-preview-card">
+                            <div class="preview-header">
+                                <h3>Profile Preview</h3>
+                                <div class="preview-toggle">
+                                    <label class="toggle-switch toggle-switch-lg">
+                                        <input type="checkbox" id="profile-public" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span>Profile Visibility</span>
+                                </div>
+                            </div>
+                            <div class="preview-content">
+                                <div class="preview-avatar">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" 
+                                         alt="Profile Preview">
+                                </div>
+                                <div class="preview-info">
+                                    <h4>John Doe</h4>
+                                    <p class="preview-title">Full Stack Developer</p>
+                                    <p class="preview-bio">Passionate developer creating amazing web experiences...</p>
+                                    <div class="preview-links">
+                                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-card">
+                            <label for="bio" class="form-label">
+                                <i class="fas fa-edit"></i> Bio / Professional Summary
+                            </label>
+                            <div class="bio-editor">
+                                <textarea id="bio" class="form-control" rows="4" 
+                                          placeholder="Tell others about yourself, your skills, and experience">Full-stack developer with 5+ years of experience in web technologies. Passionate about clean code and user-centered design. Love learning new technologies and sharing knowledge with the community.</textarea>
+                                <div class="bio-counter">
+                                    <span id="bio-chars">0</span>/500 characters
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links-grid">
+                            <div class="form-card">
+                                <label for="linkedin" class="form-label">
+                                    <i class="fab fa-linkedin"></i> LinkedIn Profile
+                                </label>
+                                <input type="url" id="linkedin" class="form-control form-control-icon" 
+                                       placeholder="https://linkedin.com/in/username">
+                            </div>
+                            
+                            <div class="form-card">
+                                <label for="github" class="form-label">
+                                    <i class="fab fa-github"></i> GitHub Profile
+                                </label>
+                                <input type="url" id="github" class="form-control form-control-icon" 
+                                       placeholder="https://github.com/username">
+                            </div>
+                            
+                            <div class="form-card">
+                                <label for="twitter" class="form-label">
+                                    <i class="fab fa-twitter"></i> Twitter Profile
+                                </label>
+                                <input type="url" id="twitter" class="form-control form-control-icon" 
+                                       placeholder="https://twitter.com/username">
+                            </div>
+                            
+                            <div class="form-card">
+                                <label for="portfolio" class="form-label">
+                                    <i class="fas fa-globe"></i> Portfolio Website
+                                </label>
+                                <input type="url" id="portfolio" class="form-control form-control-icon" 
+                                       placeholder="https://yourportfolio.com">
+                            </div>
+                        </div>
+                        
+                        <!-- Badges Display -->
+                        <div class="badges-section">
+                            <div class="section-header">
+                                <div class="section-header-content">
+                                    <h3><i class="fas fa-award"></i> Your Certifications</h3>
+                                    <p class="text-light">Badges earned through your learning journey</p>
+                                </div>
+                                <div class="section-header-badge">
+                                    <span class="badge badge-warning">12 Certificates</span>
+                                </div>
+                            </div>
+                            
+                            <div class="badges-grid">
+                                <div class="badge-card featured">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="badge-info">
+                                        <h4>JavaScript Advanced</h4>
+                                        <p>Mastered advanced JS concepts</p>
+                                        <div class="badge-meta">
+                                            <span class="badge-date"><i class="fas fa-calendar"></i> Jan 2024</span>
+                                            <span class="badge-share">
+                                                <label class="toggle-switch toggle-switch-sm">
+                                                    <input type="checkbox" checked>
+                                                    <span class="toggle-slider"></span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="badge-card">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                    <div class="badge-info">
+                                        <h4>Cloud Fundamentals</h4>
+                                        <p>AWS & Azure basics</p>
+                                        <div class="badge-meta">
+                                            <span class="badge-date"><i class="fas fa-calendar"></i> Dec 2023</span>
+                                            <span class="badge-share">
+                                                <label class="toggle-switch toggle-switch-sm">
+                                                    <input type="checkbox" checked>
+                                                    <span class="toggle-slider"></span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="badge-card">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="badge-info">
+                                        <h4>Security Basics</h4>
+                                        <p>Web security fundamentals</p>
+                                        <div class="badge-meta">
+                                            <span class="badge-date"><i class="fas fa-calendar"></i> Nov 2023</span>
+                                            <span class="badge-share">
+                                                <label class="toggle-switch toggle-switch-sm">
+                                                    <input type="checkbox">
+                                                    <span class="toggle-slider"></span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="badge-card">
+                                    <div class="badge-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="badge-info">
+                                        <h4>Database Design</h4>
+                                        <p>SQL & NoSQL expertise</p>
+                                        <div class="badge-meta">
+                                            <span class="badge-date"><i class="fas fa-calendar"></i> Oct 2023</span>
+                                            <span class="badge-share">
+                                                <label class="toggle-switch toggle-switch-sm">
+                                                    <input type="checkbox" checked>
+                                                    <span class="toggle-slider"></span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="view-all-badges">
+                                <a href="#" class="btn btn-outline">
+                                    <i class="fas fa-eye"></i> View All Certificates
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-save">
+                                <i class="fas fa-save"></i> Update Public Profile
+                                <span class="btn-loader"></span>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Billing & Subscription Section -->
+                <section class="profile-section" id="billing">
+                    <div class="section-header">
+                        <div class="section-header-content">
+                            <h2><i class="fas fa-credit-card"></i> Billing & Subscription</h2>
+                            <p class="text-light">Manage your subscription and payment methods</p>
+                        </div>
+                        <div class="section-header-badge">
+                            <span class="badge badge-primary">Active</span>
+                        </div>
+                    </div>
+                    
+                    <div class="subscription-overview">
+                        <div class="subscription-card premium">
+                            <div class="subscription-header">
+                                <div class="plan-info">
+                                    <h3>Premium Plan</h3>
+                                    <div class="plan-price">
+                                        <span class="price">$19.99</span>
+                                        <span class="period">/month</span>
+                                    </div>
+                                </div>
+                                <div class="plan-features">
+                                    <div class="feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Unlimited Courses</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Certificates</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Priority Support</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subscription-footer">
+                                <div class="billing-info">
+                                    <p><strong>Next Billing Date:</strong> March 15, 2024</p>
+                                    <p><strong>Payment Method:</strong> Visa ending in 4242</p>
+                                </div>
+                                <button class="btn btn-secondary" id="change-plan">
+                                    <i class="fas fa-sync-alt"></i> Change Plan
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="usage-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h4>42</h4>
+                                    <p>Active Courses</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h4>128</h4>
+                                    <p>Learning Hours</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h4>12</h4>
+                                    <p>Certificates</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Methods -->
+                    <div class="payment-methods">
+                        <h3><i class="fas fa-wallet"></i> Payment Methods</h3>
+                        <div class="payment-cards">
+                            <div class="payment-card active">
+                                <div class="card-icon">
+                                    <i class="fab fa-cc-visa"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h4>Visa ending in 4242</h4>
+                                    <p>Expires 08/2025 • Primary</p>
+                                </div>
+                                <button class="btn btn-outline btn-sm" id="update-payment">
+                                    Edit
+                                </button>
+                            </div>
+                            <button class="add-card-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Add New Payment Method</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Billing History -->
+                    <div class="billing-history">
+                        <h3><i class="fas fa-receipt"></i> Billing History</h3>
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Invoice</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Feb 15, 2024</td>
+                                        <td>Premium Monthly Subscription</td>
+                                        <td>$19.99</td>
+                                        <td><span class="status-badge success">Paid</span></td>
+                                        <td><button class="btn-link"><i class="fas fa-download"></i> Download</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jan 15, 2024</td>
+                                        <td>Premium Monthly Subscription</td>
+                                        <td>$19.99</td>
+                                        <td><span class="status-badge success">Paid</span></td>
+                                        <td><button class="btn-link"><i class="fas fa-download"></i> Download</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dec 15, 2023</td>
+                                        <td>Premium Monthly Subscription</td>
+                                        <td>$19.99</td>
+                                        <td><span class="status-badge success">Paid</span></td>
+                                        <td><button class="btn-link"><i class="fas fa-download"></i> Download</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="danger-actions">
+                        <button class="btn btn-danger" id="cancel-subscription">
+                            <i class="fas fa-ban"></i> Cancel Subscription
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Notifications & Preferences Section -->
+                <section class="profile-section" id="notifications">
+                    <div class="section-header">
+                        <div class="section-header-content">
+                            <h2><i class="fas fa-bell"></i> Notifications & Preferences</h2>
+                            <p class="text-light">Control how and when you receive notifications</p>
+                        </div>
+                        <div class="section-header-badge">
+                            <span class="badge badge-info">Custom</span>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-categories">
+                        <div class="category-card">
+                            <div class="category-header">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h3>Learning Updates</h3>
+                            </div>
+                            <div class="category-settings">
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Course Updates</h4>
+                                        <p>Get notified about new content and updates in enrolled courses</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="notif-course-updates" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Due Date Reminders</h4>
+                                        <p>Receive reminders about upcoming assignments and deadlines</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="notif-due-dates" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Progress Reports</h4>
+                                        <p>Weekly summaries of your learning progress</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="notif-progress" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-card">
+                            <div class="category-header">
+                                <i class="fas fa-envelope"></i>
+                                <h3>Email Preferences</h3>
+                            </div>
+                            <div class="category-settings">
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Marketing Emails</h4>
+                                        <p>Receive promotional offers and SkillSync news</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="notif-marketing">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Product Updates</h4>
+                                        <p>New features and platform improvements</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="notif-product" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Community News</h4>
+                                        <p>Updates from other learners and community events</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="notif-community">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-card">
+                            <div class="category-header">
+                                <i class="fas fa-tools"></i>
+                                <h3>System Alerts</h3>
+                            </div>
+                            <div class="category-settings">
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Lab Activity Alerts</h4>
+                                        <p>Notifications for lab environment availability and changes</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="notif-lab-alerts">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Maintenance Notices</h4>
+                                        <p>Scheduled maintenance and downtime alerts</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="notif-maintenance" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Security Alerts</h4>
+                                        <p>Important security updates and breach notifications</p>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="notif-security" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-frequency">
+                        <h3><i class="fas fa-clock"></i> Frequency Settings</h3>
+                        <div class="frequency-options">
+                            <div class="frequency-option active">
+                                <input type="radio" name="frequency" id="freq-instant" checked>
+                                <label for="freq-instant">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Instant</span>
+                                    <small>Receive notifications immediately</small>
+                                </label>
+                            </div>
+                            <div class="frequency-option">
+                                <input type="radio" name="frequency" id="freq-daily">
+                                <label for="freq-daily">
+                                    <i class="fas fa-sun"></i>
+                                    <span>Daily Digest</span>
+                                    <small>Get one summary per day</small>
+                                </label>
+                            </div>
+                            <div class="frequency-option">
+                                <input type="radio" name="frequency" id="freq-weekly">
+                                <label for="freq-weekly">
+                                    <i class="fas fa-calendar-week"></i>
+                                    <span>Weekly Summary</span>
+                                    <small>Weekly report every Monday</small>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" id="reset-notifications">
+                            <i class="fas fa-undo"></i> Reset to Defaults
+                        </button>
+                        <button type="submit" class="btn btn-primary btn-save">
+                            <i class="fas fa-save"></i> Save Preferences
+                            <span class="btn-loader"></span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Security Section -->
+                <section class="profile-section" id="security">
+                    <div class="section-header">
+                        <div class="section-header-content">
+                            <h2><i class="fas fa-shield-alt"></i> Security & Data Management</h2>
+                            <p class="text-light">Manage your account security and data</p>
+                        </div>
+                        <div class="section-header-badge">
+                            <span class="badge badge-warning">High Priority</span>
+                        </div>
+                    </div>
+                    
+                    <div class="security-grid">
+                        <div class="security-card">
+                            <div class="security-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="security-content">
+                                <h3>Two-Factor Authentication</h3>
+                                <p>Add an extra layer of security to your account</p>
+                                <div class="security-status">
+                                    <span class="status-badge warning">Not Enabled</span>
+                                </div>
+                                <button class="btn btn-tertiary" id="enable-2fa">
+                                    <i class="fas fa-shield-alt"></i> Enable 2FA
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="security-card">
+                            <div class="security-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="security-content">
+                                <h3>Active Sessions</h3>
+                                <p>Devices currently logged into your account</p>
+                                <div class="sessions-list">
+                                    <div class="session-item current">
+                                        <i class="fas fa-desktop"></i>
+                                        <div class="session-info">
+                                            <span>Chrome on Windows</span>
+                                            <small>Current session • New York, USA</small>
+                                        </div>
+                                        <button class="btn-link btn-sm">Revoke</button>
+                                    </div>
+                                    <div class="session-item">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <div class="session-info">
+                                            <span>Safari on iPhone</span>
+                                            <small>Last active: 2 hours ago • London, UK</small>
+                                        </div>
+                                        <button class="btn-link btn-sm">Revoke</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="data-management">
+                        <h3><i class="fas fa-database"></i> Data Management</h3>
+                        <div class="data-actions">
+                            <button class="data-action-btn">
+                                <i class="fas fa-download"></i>
+                                <div class="action-content">
+                                    <h4>Export Data</h4>
+                                    <p>Download all your personal data</p>
+                                </div>
+                            </button>
+                            <button class="data-action-btn">
+                                <i class="fas fa-trash-alt"></i>
+                                <div class="action-content">
+                                    <h4>Clear History</h4>
+                                    <p>Delete your learning history</p>
+                                </div>
+                            </button>
+                            <button class="data-action-btn">
+                                <i class="fas fa-eye-slash"></i>
+                                <div class="action-content">
+                                    <h4>Privacy Settings</h4>
+                                    <p>Manage data sharing preferences</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="danger-zone">
+                        <div class="danger-header">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>Danger Zone</h3>
+                        </div>
+                        <p class="danger-description">
+                            These actions are irreversible. Please proceed with caution.
+                        </p>
+                        <div class="danger-actions">
+                            <button class="btn btn-danger btn-outline" id="deactivate-account">
+                                <i class="fas fa-user-slash"></i> Deactivate Account
+                            </button>
+                            <button class="btn btn-danger" id="delete-account">
+                                <i class="fas fa-trash-alt"></i> Delete Account Permanently
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Learning</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Certifications</a></li>
+                        <li><a href="#">Skills Assessment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">System Status</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" width="20" height="20" fill="white">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                        <path d="M2 17L12 22L22 17" fill="none" stroke="white" stroke-width="2"/>
+                        <path d="M2 12L12 17L22 12" fill="none" stroke="white" stroke-width="2"/>
+                    </svg>
+                    <span>SkillSync</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2024 SkillSync. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Confirmation Modal for Delete Account -->
+    <div class="overlay" id="delete-confirm-modal" data-modal-overlay="delete-confirm">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Delete Account</h3>
+                <button class="btn-link" data-modal-close>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-icon danger">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h4>Are you absolutely sure?</h4>
+                <p>This action cannot be undone. This will permanently delete your SkillSync account and remove all your data from our servers.</p>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" data-modal-close>Cancel</button>
+                    <button class="btn btn-danger" id="confirm-delete">Yes, Delete Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div class="overlay" id="password-modal" data-modal-overlay="password">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Change Password</h3>
+                <button class="btn-link" data-modal-close>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="password-form">
+                    <div class="form-group">
+                        <label for="current-password" class="form-label">Current Password</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="current-password" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password" class="form-label">New Password</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-key"></i>
+                            <input type="password" id="new-password" class="form-control" required>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-bar"></div>
+                            <div class="strength-text">Password strength: <span>Weak</span></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password" class="form-label">Confirm New Password</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="confirm-password" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" data-modal-close>Cancel</button>
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avatar Upload Modal -->
+    <div class="overlay" id="avatar-modal" data-modal-overlay="avatar">
+        <div class="modal modal-lg">
+            <div class="modal-header">
+                <h3>Update Profile Picture</h3>
+                <button class="btn-link" data-modal-close>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="avatar-uploader">
+                    <div class="upload-preview">
+                        <div class="preview-container" id="avatar-preview-large">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" 
+                                 alt="Avatar Preview">
+                        </div>
+                    </div>
+                    <div class="upload-actions">
+                        <label class="btn btn-primary" for="avatar-file-input">
+                            <i class="fas fa-upload"></i> Choose Photo
+                        </label>
+                        <input type="file" id="avatar-file-input" accept="image/*" hidden>
+                        <button type="button" class="btn btn-outline" id="remove-avatar-btn">
+                            <i class="fas fa-trash"></i> Remove
+                        </button>
+                    </div>
+                    <div class="upload-hint">
+                        <p><i class="fas fa-info-circle"></i> Recommended: Square image, at least 400x400 pixels. Max size 5MB.</p>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" data-modal-close>Cancel</button>
+                    <button type="button" class="btn btn-primary" id="save-avatar">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal for Cancel Subscription -->
+    <div class="overlay" id="cancel-subscription-modal" data-modal-overlay="cancel-subscription">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Cancel Subscription</h3>
+                <button class="btn-link" data-modal-close>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-icon warning">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h4>Cancel Premium Subscription?</h4>
+                <p>Your subscription will remain active until March 15, 2024. After that date, you'll lose access to premium features.</p>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" data-modal-close>Keep Subscription</button>
+                    <button class="btn btn-danger" id="confirm-cancel">Cancel Subscription</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast Notification -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/profile.js"></script>
+</body>
+</html>

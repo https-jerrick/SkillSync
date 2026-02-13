@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center (FAQ) - SkillSync</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="../assets/css/faq.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="home.html" class="logo">
+                    <i class="fas fa-graduation-cap fa-lg"></i>
+                    <span>SkillSync</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing Plans</a></li>
+                    <li><a href="faq.html" class="nav-link">Help Center</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog & Resources</a></li>
+                    <li><a href="terms.html" class="nav-link">Policies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+
+                    <!-- Auth Buttons -->
+                    <div class="auth-buttons">
+                        <a href="auth.html" class="btn btn-outline1">
+                            <!-- <i class="fas fa-sign-in-alt"></i> -->
+                            Sign In
+                        </a>
+                        <a href="auth.html" class="btn btn-primary">
+                            <!-- <i class="fas fa-user-plus"></i> -->
+                            Register
+                        </a>
+                    </div>
+                </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-content">
+        <!-- Hero/Search Section -->
+        <section class="hero-faq">
+            <div class="container container-sm">
+                <div class="hero-content">
+                    <h1>How can we help you?</h1>
+                    <p class="hero-subtitle">Find answers to common questions or contact our support team</p>
+                    
+                    <div class="search-container">
+                        <div class="search-wrapper">
+                            <i class="fas fa-search search-icon"></i>
+                            <input 
+                                type="text" 
+                                class="form-control input-search search-input-large" 
+                                placeholder="Search for answers, guides, or topics..."
+                                id="faq-search"
+                            >
+                            <button class="btn btn-primary search-btn-large">Search</button>
+                        </div>
+                        <div class="search-suggestions hidden" id="search-suggestions">
+                            <div class="suggestion-item">
+                                <i class="fas fa-file-alt"></i>
+                                <span>How to reset my password</span>
+                            </div>
+                            <div class="suggestion-item">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Course enrollment process</span>
+                            </div>
+                            <div class="suggestion-item">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Practice lab system requirements</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Categories Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Browse by Category</h2>
+                    <p class="section-subtitle">Find help articles organized by topic</p>
+                </div>
+                
+                <div class="categories-grid grid grid-cols-2 grid-cols-3-md grid-cols-1-sm">
+                    <a href="#account-billing" class="category-card card">
+                        <div class="category-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3 class="category-title">Account & Billing</h3>
+                        <p class="category-description">Manage subscriptions, payments, and account settings</p>
+                        <span class="category-count">12 articles</span>
+                    </a>
+                    
+                    <a href="#troubleshooting" class="category-card card">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="category-title">Troubleshooting</h3>
+                        <p class="category-description">Solve common technical issues and errors</p>
+                        <span class="category-count">18 articles</span>
+                    </a>
+                    
+                    <a href="#course-enrollment" class="category-card card">
+                        <div class="category-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="category-title">Course Enrollment</h3>
+                        <p class="category-description">Join courses, track progress, and access materials</p>
+                        <span class="category-count">9 articles</span>
+                    </a>
+                    
+                    <a href="#practice-labs" class="category-card card">
+                        <div class="category-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3 class="category-title">Practice Labs</h3>
+                        <p class="category-description">Setup, access, and troubleshooting for labs</p>
+                        <span class="category-count">15 articles</span>
+                    </a>
+                    
+                    <a href="#certifications" class="category-card card">
+                        <div class="category-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="category-title">Certifications & Progress</h3>
+                        <p class="category-description">Track learning, earn certificates, and view achievements</p>
+                        <span class="category-count">7 articles</span>
+                    </a>
+                    
+                    <a href="#technical" class="category-card card">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="category-title">Technical Requirements</h3>
+                        <p class="category-description">System specs, browser compatibility, and setup</p>
+                        <span class="category-count">11 articles</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links / Trending Topics Section -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Trending Topics</h2>
+                    <p class="section-subtitle">Most frequently viewed help articles</p>
+                </div>
+                
+                <div class="quick-links-container">
+                    <div class="quick-links-grid">
+                        <div class="quick-links-column">
+                            <h3 class="quick-links-title">Getting Started</h3>
+                            <ul class="quick-links-list">
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Creating your SkillSync account</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> How to reset your password</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Setting up two-factor authentication</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Updating your profile information</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="quick-links-column">
+                            <h3 class="quick-links-title">Learning & Courses</h3>
+                            <ul class="quick-links-list">
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Enrolling in a course</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Accessing course materials</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Tracking your learning progress</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Downloading course certificates</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="quick-links-column">
+                            <h3 class="quick-links-title">Technical Support</h3>
+                            <ul class="quick-links-list">
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Troubleshooting login issues</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Video playback problems</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Practice lab connection errors</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Browser compatibility guide</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorized FAQ List Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Browse answers to common questions by category</p>
+                </div>
+                
+                <!-- Account & Billing FAQs -->
+                <div class="faq-category" id="account-billing">
+                    <h3 class="faq-category-title">
+                        <i class="fas fa-credit-card category-title-icon"></i>
+                        Account & Billing FAQs
+                    </h3>
+                    <div class="faq-accordion">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>How do I reset my password?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>To reset your password:</p>
+                                <ol>
+                                    <li>Click "Forgot Password" on the login page</li>
+                                    <li>Enter your registered email address</li>
+                                    <li>Check your email for the reset link (check spam folder too)</li>
+                                    <li>Click the link and create a new strong password</li>
+                                    <li>Log in with your new credentials</li>
+                                </ol>
+                                <p>If you don't receive the email within 5 minutes, contact our support team.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>How can I update my payment method?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>To update your payment method:</p>
+                                <ol>
+                                    <li>Go to your Dashboard</li>
+                                    <li>Click "Billing & Subscription" in the sidebar</li>
+                                    <li>Select "Payment Methods"</li>
+                                    <li>Click "Add New Payment Method"</li>
+                                    <li>Enter your card details and save</li>
+                                    <li>You can set it as default or remove old methods</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Can I cancel my subscription anytime?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period. To cancel:</p>
+                                <ol>
+                                    <li>Navigate to "Billing & Subscription" in your Dashboard</li>
+                                    <li>Click on your active plan</li>
+                                    <li>Select "Cancel Subscription"</li>
+                                    <li>Follow the prompts to confirm</li>
+                                </ol>
+                                <p>You'll receive a confirmation email once cancelled. You can resubscribe anytime.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Troubleshooting FAQs -->
+                <div class="faq-category" id="troubleshooting">
+                    <h3 class="faq-category-title">
+                        <i class="fas fa-tools category-title-icon"></i>
+                        Troubleshooting FAQs
+                    </h3>
+                    <div class="faq-accordion">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Why can't I log into my account?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>If you're having trouble logging in, try these steps:</p>
+                                <ul>
+                                    <li><strong>Check your credentials:</strong> Ensure you're using the correct email and password (case-sensitive)</li>
+                                    <li><strong>Reset password:</strong> Use the "Forgot Password" option if you've forgotten it</li>
+                                    <li><strong>Clear browser cache:</strong> Sometimes cached data causes login issues</li>
+                                    <li><strong>Try different browser:</strong> Switch to Chrome, Firefox, or Edge</li>
+                                    <li><strong>Disable extensions:</strong> Some browser extensions may interfere</li>
+                                    <li><strong>Check internet connection:</strong> Ensure you have stable internet</li>
+                                </ul>
+                                <p>If problems persist, contact support with details about the error message you're seeing.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Why are videos not playing properly?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Video playback issues can be caused by several factors:</p>
+                                <ul>
+                                    <li><strong>Internet speed:</strong> Ensure you have at least 5 Mbps for HD streaming</li>
+                                    <li><strong>Browser compatibility:</strong> Use the latest version of Chrome, Firefox, Safari, or Edge</li>
+                                    <li><strong>Clear cache:</strong> Clear your browser's cache and cookies</li>
+                                    <li><strong>Disable ad blockers:</strong> Some ad blockers interfere with video players</li>
+                                    <li><strong>Update browser:</strong> Make sure your browser is up to date</li>
+                                    <li><strong>Check firewall:</strong> Ensure your firewall isn't blocking video content</li>
+                                </ul>
+                                <p>You can also try switching video quality to a lower setting in the player controls.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course Enrollment FAQs -->
+                <div class="faq-category" id="course-enrollment">
+                    <h3 class="faq-category-title">
+                        <i class="fas fa-book-open category-title-icon"></i>
+                        Course Enrollment FAQs
+                    </h3>
+                    <div class="faq-accordion">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>How do I enroll in a course?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Enrolling in a course is simple:</p>
+                                <ol>
+                                    <li>Browse the <a href="course-catalog.html">Course Catalog</a></li>
+                                    <li>Click on a course that interests you</li>
+                                    <li>Click the "Enroll Now" button on the course page</li>
+                                    <li>If the course is free, you'll get immediate access</li>
+                                    <li>If it's a paid course, complete the checkout process</li>
+                                    <li>Once enrolled, the course appears in your Dashboard</li>
+                                </ol>
+                                <p>Some courses may have prerequisites that need to be completed first.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Can I access courses on mobile devices?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes! SkillSync is fully responsive and works on mobile devices:</p>
+                                <ul>
+                                    <li><strong>Mobile browsers:</strong> Access through Chrome, Safari, or Firefox on your phone or tablet</li>
+                                    <li><strong>App experience:</strong> Add SkillSync to your home screen for an app-like experience</li>
+                                    <li><strong>Features available:</strong> Watch videos, take quizzes, access materials, track progress</li>
+                                    <li><strong>Offline access:</strong> Some courses allow downloading materials for offline viewing</li>
+                                    <li><strong>Practice labs:</strong> May require desktop for full functionality</li>
+                                </ul>
+                                <p>For the best experience, ensure you have the latest browser version on your mobile device.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Couldn't Find It? / Contact Support CTA Section -->
+        <section class="section contact-cta">
+            <div class="container container-sm">
+                <div class="contact-cta-content">
+                    <div class="contact-cta-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h2 class="contact-cta-title">Still Need Assistance?</h2>
+                    <p class="contact-cta-description">Our support team is ready to help you with any questions or issues you might have.</p>
+                    
+                    <div class="contact-options">
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-envelope"></i>
+                            Contact Support
+                        </a>
+                        
+                        <button class="btn btn-outline btn-lg" id="live-chat-btn">
+                            <i class="fas fa-comment-dots"></i>
+                            Start Live Chat
+                        </button>
+                        
+                        <a href="#" class="btn btn-tertiary btn-lg">
+                            <i class="fas fa-server"></i>
+                            System Status
+                        </a>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <!-- <strong>Support Hours:</strong> -->
+                                <span>Mon-Fri, 9AM-6PM EST</span>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <!-- <strong>Email:</strong> -->
+                                <span>support@skillsync.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <!-- <strong>Phone:</strong> -->
+                                <span>+1 (800) 123-4567</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER SECTION ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Learning Section -->
+                <div class="footer-section">
+                    <h3>Learning</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-catalog.html">Course Catalog</a></li>
+                        <li><a href="learning-path.html">Learning Paths</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="practice-labs.html">Practice Labs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">Help Center (FAQ)</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog & Resources</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Section -->
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillSync</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2024 SkillSync. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="../assets/js/global.js"></script>
+    
+    <!-- Page-specific JavaScript -->
+    <script>
+        // FAQ Accordion Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize FAQ accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const faqItem = question.parentElement;
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('.fa-chevron-down');
+                    
+                    // Close other open FAQs in the same category
+                    const category = faqItem.closest('.faq-category');
+                    const openItems = category.querySelectorAll('.faq-item.active');
+                    
+                    openItems.forEach(item => {
+                        if (item !== faqItem) {
+                            item.classList.remove('active');
+                            item.querySelector('.faq-answer').style.maxHeight = null;
+                            item.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current FAQ
+                    faqItem.classList.toggle('active');
+                    
+                    if (faqItem.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        answer.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('faq-search');
+            const searchSuggestions = document.getElementById('search-suggestions');
+            
+            if (searchInput) {
+                searchInput.addEventListener('focus', () => {
+                    searchSuggestions.classList.remove('hidden');
+                });
+                
+                searchInput.addEventListener('blur', () => {
+                    // Delay hiding to allow clicking on suggestions
+                    setTimeout(() => {
+                        searchSuggestions.classList.add('hidden');
+                    }, 200);
+                });
+                
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase();
+                    
+                    if (query.length > 0) {
+                        searchSuggestions.classList.remove('hidden');
+                        
+                        // Filter suggestions (simulated)
+                        const suggestionItems = searchSuggestions.querySelectorAll('.suggestion-item');
+                        suggestionItems.forEach(item => {
+                            const text = item.querySelector('span').textContent.toLowerCase();
+                            if (text.includes(query)) {
+                                item.style.display = 'flex';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    } else {
+                        // Show all suggestions when empty
+                        const suggestionItems = searchSuggestions.querySelectorAll('.suggestion-item');
+                        suggestionItems.forEach(item => {
+                            item.style.display = 'flex';
+                        });
+                    }
+                });
+                
+                // Search button functionality
+                document.querySelector('.search-btn-large').addEventListener('click', () => {
+                    performSearch();
+                });
+                
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        performSearch();
+                    }
+                });
+                
+                function performSearch() {
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        // In a real app, this would redirect to search results
+                        window.showNotification(`Searching for: "${query}"`, 'info');
+                        
+                        // Scroll to FAQ section if search term matches a category
+                        const searchTerm = query.toLowerCase();
+                        const categories = ['account', 'billing', 'troubleshooting', 'course', 'enrollment', 'practice', 'lab', 'certification', 'technical'];
+                        
+                        for (const category of categories) {
+                            if (searchTerm.includes(category)) {
+                                const categoryId = getCategoryId(category);
+                                if (categoryId) {
+                                    document.getElementById(categoryId)?.scrollIntoView({ behavior: 'smooth' });
+                                }
+                                break;
+                            }
+                        }
+                    }
+                }
+                
+                function getCategoryId(category) {
+                    const categoryMap = {
+                        'account': 'account-billing',
+                        'billing': 'account-billing',
+                        'troubleshooting': 'troubleshooting',
+                        'course': 'course-enrollment',
+                        'enrollment': 'course-enrollment',
+                        'practice': 'practice-labs',
+                        'lab': 'practice-labs',
+                        'certification': 'certifications',
+                        'technical': 'technical'
+                    };
+                    return categoryMap[category];
+                }
+            }
+            
+            // Live chat button
+            const liveChatBtn = document.getElementById('live-chat-btn');
+            if (liveChatBtn) {
+                liveChatBtn.addEventListener('click', () => {
+                    window.showNotification('Live chat is available Monday-Friday, 9AM-6PM EST. Please contact us via email for immediate assistance.', 'info');
+                });
+            }
+            
+            // Category card smooth scroll
+            const categoryCards = document.querySelectorAll('.category-card');
+            categoryCards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    const href = card.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                            
+                            // Open first FAQ in the category
+                            const firstFaq = target.querySelector('.faq-item');
+                            if (firstFaq && !firstFaq.classList.contains('active')) {
+                                firstFaq.querySelector('.faq-question').click();
+                            }
+                        }
+                    }
+                });
+            });
+            
+            // Open first FAQ in each category by default on page load
+            setTimeout(() => {
+                document.querySelectorAll('.faq-category').forEach(category => {
+                    const firstFaq = category.querySelector('.faq-item');
+                    if (firstFaq && window.innerWidth > 768) { // Only on desktop
+                        firstFaq.classList.add('active');
+                        const answer = firstFaq.querySelector('.faq-answer');
+                        const icon = firstFaq.querySelector('.fa-chevron-down');
+                        if (answer && icon) {
+                            answer.style.maxHeight = answer.scrollHeight + 'px';
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    }
+                });
+            }, 500);
+        });
+    </script>
+</body>
+</html>
