@@ -58,36 +58,73 @@ The platform includes several structured pages:
 
 ## Project Structure
 
+## Project Structure
+
 ```
 SkillSync
 │
 ├── index.html
 │
+├── pages
+│   ├── dashboard.html
+│   ├── explore.html
+│   ├── courses.html
+│   ├── course-details.html
+│   ├── analytics.html
+│   ├── progress.html
+│   ├── certificates.html
+│   ├── blog.html
+│   ├── blog-details.html
+│   ├── contact.html
+│   ├── faq.html
+│   ├── pricing.html
+│   ├── profile.html
+│   ├── settings.html
+│   └── auth.html
+│
 ├── assets
+│
 │   ├── css
 │   │   ├── global.css
-│   │   ├── home.css
+│   │   ├── navbar.css
+│   │   ├── footer.css
+│   │   ├── dashboard.css
+│   │   ├── explore.css
+│   │   ├── courses.css
+│   │   ├── course-details.css
 │   │   ├── analytics.css
-│   │   ├── auth.css
+│   │   ├── progress.css
+│   │   ├── certificates.css
 │   │   ├── blog.css
-│   │   ├── certifications.css
-│   │   └── contact.css
-│   │
-│   ├── js
-│   │   ├── analytics.js
-│   │   ├── auth.js
-│   │   ├── blog.js
-│   │   ├── certifications.js
-│   │   └── contact.js
-│   │
-│   └── images
+│   │   ├── blog-details.css
+│   │   ├── contact.css
+│   │   ├── profile.css
+│   │   └── auth.css
 │
-└── pages
-    ├── analytics.html
-    ├── auth.html
-    ├── blog.html
-    ├── certifications.html
-    └── contact.html
+│   ├── js
+│   │   ├── main.js
+│   │   ├── navbar.js
+│   │   ├── dashboard.js
+│   │   ├── explore.js
+│   │   ├── courses.js
+│   │   ├── course-details.js
+│   │   ├── analytics.js
+│   │   ├── progress.js
+│   │   ├── certificates.js
+│   │   ├── blog.js
+│   │   ├── blog-details.js
+│   │   ├── contact.js
+│   │   ├── profile.js
+│   │   ├── settings.js
+│   │   └── auth.js
+│
+│   └── images
+│       ├── logo.png
+│       ├── hero.jpg
+│       ├── courses
+│       └── icons
+│
+└── README.md
 ```
 
 ---
@@ -97,7 +134,7 @@ SkillSync
 1. Clone the repository
 
 ```
-git clone https://github.com/yourusername/skillsync.git
+git clone https://github.com/https-jerrick/skillsync.git
 ```
 
 2. Open the project folder.
