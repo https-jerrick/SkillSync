@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SkillSync</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER - FIXED NAVBAR WITH WORKING MENU -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo (Left Side) -->
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillSync</span>
+                </a>
+
+                <!-- Desktop Navigation (Visible on large screens) -->
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing Plans</a></li>
+                    <li><a href="faq.html" class="nav-link">Help Center</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog & Resources</a></li>
+                    <li><a href="terms.html" class="nav-link">Policies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+
+                <!-- Right Side Actions -->
+                <div class="nav-actions">
+                    <!-- Auth Buttons -->
+                    <div class="auth-buttons">
+                        <a href="auth.html" class="btn btn-outline1">Sign In</a>
+                        <a href="auth.html" class="btn btn-primary">Register</a>
+                    </div>
+
+                    <!-- Search Button -->
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY (This is crucial for mobile navigation) -->
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-panel">
+            <button class="close-mobile-btn" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <!-- Mobile Navigation Links (All pages here) -->
+            <ul class="mobile-nav-links">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing Plans</a></li>
+                    <li><a href="faq.html" class="nav-link">Help Center</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog & Resources</a></li>
+                    <li><a href="terms.html" class="nav-link">Policies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            
+            <!-- Mobile Auth Buttons -->
+            <div class="mobile-extra">
+                <div class="mobile-auth-buttons">
+                    <a href="auth.html" class="btn btn-outline1">Sign In</a>
+                    <a href="auth.html" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="contact-main">
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="hero contact-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="animate-fade-in">Get in Touch with the SkillSync Team</h1>
+                    <p class="hero-subtitle animate-fade-in" data-delay="100">
+                        We're here to help! Whether you have feedback, need support, want to partner with us, 
+                        or have sales inquiries - we'd love to hear from you.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT CONTENT ==================== -->
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Left Column: Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <p class="section-description">
+                        Fill out the form below and our team will get back to you within 24 hours.
+                    </p>
+
+                    <!-- Success/Error Notification Banner -->
+                    <div id="form-notification" class="notification-banner hidden">
+                        <span id="notification-message"></span>
+                        <button class="notification-close">&times;</button>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="full-name" class="form-label">Full Name *</label>
+                                <input type="text" id="full-name" class="form-control" placeholder="Enter your full name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" class="form-control" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject/Topic *</label>
+                            <select id="subject" class="form-control" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="billing">Billing Inquiry</option>
+                                <option value="feedback">General Feedback</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="sales">Sales Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" class="form-control" rows="6" placeholder="Please describe your inquiry in detail..." required></textarea>
+                            <div class="char-count" id="char-count">0/1000 characters</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Alternative Contacts & Help Widget -->
+                <div class="contact-sidebar">
+                    <!-- Before You Contact Widget -->
+                    <div class="help-widget card">
+                        <div class="widget-header">
+                            <i class="fas fa-question-circle"></i>
+                            <h3>Before You Contact Us</h3>
+                        </div>
+                        <p class="widget-description">
+                            Many questions can be answered quickly through our Help Center.
+                        </p>
+                        <a href="faq.html" class="btn btn-secondary w-full">
+                            <i class="fas fa-book"></i> Visit Help Center (FAQ)
+                        </a>
+                        
+                        <div class="search-widget">
+                            <input type="text" class="form-control input-search" placeholder="Search help articles...">
+                            <button class="btn btn-sm search-widget-btn">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Alternative Contact Methods -->
+                    <div class="contact-methods card">
+                        <h3>Alternative Contact Methods</h3>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Phone Support</h4>
+                                <p class="method-info">+1 (800) 123-4567</p>
+                                <p class="method-hours">Mon-Fri, 9am - 5pm EST</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Press & Media</h4>
+                                <p class="method-info">press@skillsync.com</p>
+                                <p class="method-hours">Response within 48 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Headquarters</h4>
+                                <p class="method-info">123 Tech Street</p>
+                                <p class="method-hours">San Francisco, CA 94107</p>
+                            </div>
+                        </div>
+
+                        <!-- Static Map -->
+                        <div class="static-map">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== FAQ PREVIEW ==================== -->
+            <section class="faq-preview section">
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Quick answers to common questions</p>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>How do I reset my password?</h4>
+                        <p>Click "Forgot Password" on the sign in page or visit your account settings.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I get a refund?</h4>
+                        <p>We offer a 14-day money-back guarantee for all annual subscriptions.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you offer team pricing?</h4>
+                        <p>Yes! Contact our sales team for custom enterprise and team plans.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How do I download certificates?</h4>
+                        <p>Certificates are available in your dashboard under "My Certifications".</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-lg">
+                    <a href="faq.html" class="btn btn-outline1">
+                        <i class="fas fa-book-open"></i> View All FAQs
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Learning Section -->
+                <div class="footer-section">
+                    <h3>Learning</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-catalog.html">Course Catalog</a></li>
+                        <li><a href="learning-path.html">Learning Paths</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="practice-labs.html">Practice Labs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">Help Center (FAQ)</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog & Resources</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Section -->
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillSync</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2024 SkillSync. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>

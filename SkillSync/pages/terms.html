@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service & Privacy Policy - SkillSync</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="../assets/css/terms.css">
+</head>
+<body>
+    <!-- HEADER - FIXED NAVBAR WITH WORKING MENU -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo (Left Side) -->
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillSync</span>
+                </a>
+
+                <!-- Desktop Navigation (Visible on large screens) -->
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing Plans</a></li>
+                    <li><a href="faq.html" class="nav-link">Help Center</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog & Resources</a></li>
+                    <li><a href="terms.html" class="nav-link">Policies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+
+                <!-- Right Side Actions -->
+                <div class="nav-actions">
+                    <!-- Auth Buttons -->
+                    <div class="auth-buttons">
+                        <a href="auth.html" class="btn btn-outline1">Sign In</a>
+                        <a href="auth.html" class="btn btn-primary">Register</a>
+                    </div>
+
+                    <!-- Search Button -->
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY (This is crucial for mobile navigation) -->
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-panel">
+            <button class="close-mobile-btn" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <!-- Mobile Navigation Links (All pages here) -->
+            <ul class="mobile-nav-links">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing Plans</a></li>
+                    <li><a href="faq.html" class="nav-link">Help Center</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog & Resources</a></li>
+                    <li><a href="terms.html" class="nav-link">Policies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            
+            <!-- Mobile Auth Buttons -->
+            <div class="mobile-extra">
+                <div class="mobile-auth-buttons">
+                    <a href="auth.html" class="btn btn-outline1">Sign In</a>
+                    <a href="auth.html" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="legal-main">
+        <!-- Legal Navigation Tabs -->
+        <div class="legal-tabs">
+            <div class="container">
+                <div class="tabs-container">
+                    <button class="legal-tab active" data-document="terms">
+                        <i class="fas fa-file-contract"></i>
+                        <span>Terms of Service</span>
+                    </button>
+                    <button class="legal-tab" data-document="privacy">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Privacy Policy</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Document Content Area -->
+        <div class="legal-container">
+            <div class="container">
+                <div class="legal-content-wrapper">
+                    <!-- Table of Contents (Desktop) -->
+                    <aside class="toc-sidebar" id="tocSidebar">
+                        <div class="toc-header">
+                            <h4>Contents</h4>
+                            <button class="toc-close" onclick="toggleToc()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="toc-content">
+                            <!-- Terms of Service TOC -->
+                            <nav class="toc-nav active" id="toc-terms">
+                                <h5>Terms of Service</h5>
+                                <ul class="toc-list">
+                                    <li><a href="#section1" class="toc-link">1. Acceptance of Terms</a></li>
+                                    <li><a href="#section2" class="toc-link">2. User Accounts</a></li>
+                                    <li><a href="#section3" class="toc-link">3. Subscription & Payment</a></li>
+                                    <li><a href="#section4" class="toc-link">4. Intellectual Property</a></li>
+                                    <li><a href="#section5" class="toc-link">5. Usage Restrictions</a></li>
+                                    <li><a href="#section6" class="toc-link">6. User Content</a></li>
+                                    <li><a href="#section7" class="toc-link">7. Termination</a></li>
+                                    <li><a href="#section8" class="toc-link">8. Disclaimers</a></li>
+                                    <li><a href="#section9" class="toc-link">9. Limitation of Liability</a></li>
+                                    <li><a href="#section10" class="toc-link">10. Governing Law</a></li>
+                                </ul>
+                            </nav>
+                            
+                            <!-- Privacy Policy TOC -->
+                            <nav class="toc-nav" id="toc-privacy">
+                                <h5>Privacy Policy</h5>
+                                <ul class="toc-list">
+                                    <li><a href="#privacy1" class="toc-link">1. Information We Collect</a></li>
+                                    <li><a href="#privacy2" class="toc-link">2. How We Use Information</a></li>
+                                    <li><a href="#privacy3" class="toc-link">3. How We Share Information</a></li>
+                                    <li><a href="#privacy4" class="toc-link">4. Data Security</a></li>
+                                    <li><a href="#privacy5" class="toc-link">5. Your Rights & Choices</a></li>
+                                    <li><a href="#privacy6" class="toc-link">6. Data Retention</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </aside>
+
+                    <!-- Mobile TOC Toggle -->
+                    <div class="toc-toggle" onclick="toggleToc()">
+                        <i class="fas fa-list"></i>
+                        <span>Table of Contents</span>
+                    </div>
+
+                    <!-- Document Content -->
+                    <div class="legal-document">
+                        <!-- Terms of Service Content -->
+                        <article class="document active" id="terms-document">
+                            <div class="document-header">
+                                <h1 class="document-title">
+                                    <i class="fas fa-file-contract"></i>
+                                    SkillSync Terms of Service
+                                </h1>
+                                <div class="document-meta">
+                                    <span class="effective-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        Effective Date: November 14, 2025
+                                    </span>
+                                    <span class="document-version">Version 3.2</span>
+                                </div>
+                                <p class="document-intro">
+                                    Welcome to SkillSync! These Terms of Service govern your use of our platform, 
+                                    services, and content. By accessing or using SkillSync, you agree to be bound 
+                                    by these terms.
+                                </p>
+                            </div>
+
+                            <div class="document-content">
+                                <section id="section1" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">1.</span>
+                                        Acceptance of Terms
+                                    </h2>
+                                    <div class="section-content">
+                                        <p>By accessing and using the SkillSync platform ("Service"), you accept and agree to be bound by the terms and provision of this agreement. In addition, when using these particular services, you shall be subject to any posted guidelines or rules applicable to such services.</p>
+                                        
+                                        <div class="highlight-box">
+                                            <p><strong>Important:</strong> If you do not agree to these Terms of Service, please do not use the SkillSync platform. Your continued use of the Service constitutes acceptance of these terms and any future modifications.</p>
+                                        </div>
+                                        
+                                        <p>We may modify these Terms at any time, and such modifications shall be effective immediately upon posting the modified terms on the SkillSync website. Your continued use of the Service after such changes constitutes your acceptance of the new Terms.</p>
+                                    </div>
+                                </section>
+
+                                <section id="section2" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">2.</span>
+                                        User Accounts and Security
+                                    </h2>
+                                    <div class="section-content">
+                                        <h3>2.1 Account Creation</h3>
+                                        <p>To access certain features of the Service, you must create an account. You agree to:</p>
+                                        <ul class="legal-list">
+                                            <li>Provide accurate, current, and complete information during registration</li>
+                                            <li>Maintain and promptly update your account information</li>
+                                            <li>Maintain the security of your password and accept all risks of unauthorized access</li>
+                                            <li>Notify us immediately if you discover or suspect any security breaches</li>
+                                        </ul>
+                                        
+                                        <h3>2.2 Account Responsibility</h3>
+                                        <p>You are responsible for all activities that occur under your account. SkillSync reserves the right to disable any user account at our discretion if we believe you have violated these Terms.</p>
+                                        
+                                        <div class="info-box">
+                                            <p><i class="fas fa-info-circle"></i> You may not share your account credentials with others or use another user's account without permission.</p>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section id="section3" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">3.</span>
+                                        Subscription and Payment Terms
+                                    </h2>
+                                    <div class="section-content">
+                                        <h3>3.1 Subscription Plans</h3>
+                                        <p>SkillSync offers various subscription plans, including free and paid options. Details of current plans are available on our Pricing page.</p>
+                                        
+                                        <div class="feature-grid">
+                                            <div class="feature-item">
+                                                <i class="fas fa-sync-alt"></i>
+                                                <h4>Auto-renewal</h4>
+                                                <p>Subscriptions automatically renew at the end of each billing cycle</p>
+                                            </div>
+                                            <div class="feature-item">
+                                                <i class="fas fa-ban"></i>
+                                                <h4>Cancellation</h4>
+                                                <p>You may cancel anytime; access continues until current period ends</p>
+                                            </div>
+                                            <div class="feature-item">
+                                                <i class="fas fa-receipt"></i>
+                                                <h4>Receipts</h4>
+                                                <p>Invoices are emailed for each payment</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <h3>3.2 Payment Processing</h3>
+                                        <p>All payments are processed through secure third-party payment processors. We do not store your complete payment card information on our servers.</p>
+                                        
+                                        <h3>3.3 Refunds</h3>
+                                        <p>We offer a 14-day money-back guarantee for annual subscriptions. Monthly subscriptions are non-refundable after the first 48 hours.</p>
+                                    </div>
+                                </section>
+
+                                <section id="section4" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">4.</span>
+                                        Intellectual Property Rights
+                                    </h2>
+                                    <div class="section-content">
+                                        <h3>4.1 Our Content</h3>
+                                        <p>All content on the SkillSync platform, including but not limited to text, graphics, logos, images, audio clips, digital downloads, data compilations, and software, is the property of SkillSync or its content suppliers and protected by international copyright laws.</p>
+                                        
+                                        <h3>4.2 License Grant</h3>
+                                        <p>Subject to your compliance with these Terms, SkillSync grants you a limited, non-exclusive, non-transferable, revocable license to access and use the Service for your personal, non-commercial educational purposes.</p>
+                                        
+                                        <h3>4.3 User Content</h3>
+                                        <p>By submitting content to SkillSync, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and display such content in connection with the Service.</p>
+                                        
+                                        <div class="warning-box">
+                                            <p><i class="fas fa-exclamation-triangle"></i> You may not copy, distribute, modify, or create derivative works of any SkillSync content without explicit written permission.</p>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section id="section5" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">5.</span>
+                                        Acceptable Use and Restrictions
+                                    </h2>
+                                    <div class="section-content">
+                                        <p>You agree not to use the Service to:</p>
+                                        <ul class="restrictions-list">
+                                            <li><i class="fas fa-ban"></i> Violate any applicable laws or regulations</li>
+                                            <li><i class="fas fa-ban"></i> Infringe upon intellectual property rights</li>
+                                            <li><i class="fas fa-ban"></i> Transmit viruses or malicious code</li>
+                                            <li><i class="fas fa-ban"></i> Attempt to gain unauthorized access to systems</li>
+                                            <li><i class="fas fa-ban"></i> Share account credentials or access</li>
+                                            <li><i class="fas fa-ban"></i> Harass, abuse, or harm other users</li>
+                                            <li><i class="fas fa-ban"></i> Use automated systems to access the Service</li>
+                                        </ul>
+                                        
+                                        <h3>5.1 Content Standards</h3>
+                                        <p>User-generated content must not contain:</p>
+                                        <ul class="legal-list">
+                                            <li>Hate speech, discrimination, or harassment</li>
+                                            <li>False or misleading information</li>
+                                            <li>Adult, obscene, or explicit material</li>
+                                            <li>Private information of third parties</li>
+                                            <li>Commercial advertisements or spam</li>
+                                        </ul>
+                                    </div>
+                                </section>
+
+                                <section id="section6" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">6.</span>
+                                        User Content and Feedback
+                                    </h2>
+                                    <div class="section-content">
+                                        <h3>6.1 Ownership of User Content</h3>
+                                        <p>You retain ownership of any intellectual property rights in the content you submit to SkillSync. However, by submitting content, you grant SkillSync a license to use that content as described in Section 4.3.</p>
+                                        
+                                        <h3>6.2 Feedback and Suggestions</h3>
+                                        <p>If you provide feedback, suggestions, or ideas about the Service, you agree that SkillSync may use this feedback without compensation or obligation to you.</p>
+                                    </div>
+                                </section>
+
+                                <section id="section7" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">7.</span>
+                                        Termination and Suspension
+                                    </h2>
+                                    <div class="section-content">
+                                        <h3>7.1 By You</h3>
+                                        <p>You may stop using the Service at any time. To delete your account, please contact our support team.</p>
+                                        
+                                        <h3>7.2 By SkillSync</h3>
+                                        <p>We may suspend or terminate your access to the Service if we believe you have violated these Terms. We will provide notice when possible, except in cases of serious violations.</p>
+                                    </div>
+                                </section>
+
+                                <section id="section8" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">8.</span>
+                                        Disclaimers and Warranties
+                                    </h2>
+                                    <div class="section-content">
+                                        <p>The Service is provided "as is" and "as available" without warranties of any kind, either express or implied. SkillSync does not warrant that:</p>
+                                        <ul class="legal-list">
+                                            <li>The Service will be uninterrupted or error-free</li>
+                                            <li>Defects will be corrected</li>
+                                            <li>The Service is free of viruses or other harmful components</li>
+                                            <li>The results obtained from using the Service will be accurate or reliable</li>
+                                        </ul>
+                                    </div>
+                                </section>
+
+                                <section id="section9" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">9.</span>
+                                        Limitation of Liability
+                                    </h2>
+                                    <div class="section-content">
+                                        <p>To the maximum extent permitted by law, SkillSync shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from:</p>
+                                        <ul class="legal-list">
+                                            <li>Your use or inability to use the Service</li>
+                                            <li>Unauthorized access to or alteration of your transmissions or data</li>
+                                            <li>Statements or conduct of any third party on the Service</li>
+                                            <li>Any other matter relating to the Service</li>
+                                        </ul>
+                                    </div>
+                                </section>
+
+                                <section id="section10" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">10.</span>
+                                        Governing Law and Dispute Resolution
+                                    </h2>
+                                    <div class="section-content">
+                                        <h3>10.1 Governing Law</h3>
+                                        <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions.</p>
+                                        
+                                        <h3>10.2 Dispute Resolution</h3>
+                                        <p>Any disputes arising from these Terms or your use of the Service shall be resolved through binding arbitration in San Francisco, California, rather than in court.</p>
+                                        
+                                        <h3>10.3 Class Action Waiver</h3>
+                                        <p>You agree to resolve disputes on an individual basis and waive any right to participate in class actions.</p>
+                                    </div>
+                                </section>
+
+                                <!-- Contact Information -->
+                                <div class="contact-section">
+                                    <h3><i class="fas fa-envelope"></i> Contact for Legal Inquiries</h3>
+                                    <p>If you have questions about these Terms of Service, please contact our legal team:</p>
+                                    <div class="contact-info">
+                                        <p><strong>Email:</strong> <a href="mailto:legal@skillsync.com">legal@skillsync.com</a></p>
+                                        <p><strong>Mailing Address:</strong></p>
+                                        <address>
+                                            SkillSync Legal Department<br>
+                                            123 Tech Avenue, Suite 456<br>
+                                            San Francisco, CA 94107<br>
+                                            United States
+                                        </address>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Privacy Policy Content -->
+                        <article class="document" id="privacy-document">
+                            <div class="document-header">
+                                <h1 class="document-title">
+                                    <i class="fas fa-shield-alt"></i>
+                                    SkillSync Privacy Policy
+                                </h1>
+                                <div class="document-meta">
+                                    <span class="effective-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        Effective Date: November 14, 2025
+                                    </span>
+                                    <span class="document-version">Version 2.1</span>
+                                </div>
+                                <p class="document-intro">
+                                    This Privacy Policy explains how SkillSync collects, uses, discloses, and safeguards 
+                                    your information when you use our platform. Please read this policy carefully.
+                                </p>
+                            </div>
+
+                            <div class="document-content">
+                                <section id="privacy1" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">1.</span>
+                                        Information We Collect
+                                    </h2>
+                                    <div class="section-content">
+                                        <h3>1.1 Information You Provide</h3>
+                                        <div class="data-grid">
+                                            <div class="data-category">
+                                                <h4><i class="fas fa-user"></i> Account Information</h4>
+                                                <ul>
+                                                    <li>Name and email address</li>
+                                                    <li>Profile picture and bio</li>
+                                                    <li>Educational background</li>
+                                                    <li>Career interests</li>
+                                                </ul>
+                                            </div>
+                                            <div class="data-category">
+                                                <h4><i class="fas fa-credit-card"></i> Payment Information</h4>
+                                                <ul>
+                                                    <li>Billing address</li>
+                                                    <li>Payment method details (processed by third parties)</li>
+                                                    <li>Subscription history</li>
+                                                </ul>
+                                            </div>
+                                            <div class="data-category">
+                                                <h4><i class="fas fa-comments"></i> Communications</h4>
+                                                <ul>
+                                                    <li>Support requests</li>
+                                                    <li>Feedback and surveys</li>
+                                                    <li>Forum posts and comments</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <h3>1.2 Automatically Collected Information</h3>
+                                        <p>We automatically collect certain information when you use our Service:</p>
+                                        <ul class="legal-list">
+                                            <li><strong>Usage Data:</strong> Pages visited, time spent, features used</li>
+                                            <li><strong>Device Information:</strong> Device type, operating system, browser type</li>
+                                            <li><strong>Location Data:</strong> Approximate location based on IP address</li>
+                                            <li><strong>Cookies and Tracking:</strong> Information from cookies and similar technologies</li>
+                                        </ul>
+                                        
+                                        <h3>1.3 Information from Third Parties</h3>
+                                        <p>We may receive information about you from:</p>
+                                        <ul class="legal-list">
+                                            <li>Social media platforms when you connect your account</li>
+                                            <li>Payment processors regarding your transactions</li>
+                                            <li>Analytics providers about platform usage</li>
+                                        </ul>
+                                    </div>
+                                </section>
+
+                                <section id="privacy2" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">2.</span>
+                                        How We Use Your Information
+                                    </h2>
+                                    <div class="section-content">
+                                        <p>We use your information for the following purposes:</p>
+                                        
+                                        <div class="purpose-grid">
+                                            <div class="purpose-card">
+                                                <div class="purpose-icon">
+                                                    <i class="fas fa-cogs"></i>
+                                                </div>
+                                                <h4>Service Delivery</h4>
+                                                <p>To provide and maintain our Service, process payments, and authenticate users</p>
+                                            </div>
+                                            <div class="purpose-card">
+                                                <div class="purpose-icon">
+                                                    <i class="fas fa-chart-line"></i>
+                                                </div>
+                                                <h4>Improvements</h4>
+                                                <p>To analyze usage patterns and improve platform functionality</p>
+                                            </div>
+                                            <div class="purpose-card">
+                                                <div class="purpose-icon">
+                                                    <i class="fas fa-bullhorn"></i>
+                                                </div>
+                                                <h4>Communication</h4>
+                                                <p>To send updates, security alerts, and support messages</p>
+                                            </div>
+                                            <div class="purpose-card">
+                                                <div class="purpose-icon">
+                                                    <i class="fas fa-shield-alt"></i>
+                                                </div>
+                                                <h4>Security</h4>
+                                                <p>To monitor for fraudulent activity and protect our platform</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <h3>2.1 Legal Basis for Processing</h3>
+                                        <p>We process your personal information based on:</p>
+                                        <ul class="legal-list">
+                                            <li><strong>Contractual Necessity:</strong> To fulfill our agreement with you</li>
+                                            <li><strong>Legitimate Interests:</strong> To improve our services and prevent fraud</li>
+                                            <li><strong>Consent:</strong> Where you have given explicit consent</li>
+                                            <li><strong>Legal Obligations:</strong> To comply with applicable laws</li>
+                                        </ul>
+                                    </div>
+                                </section>
+
+                                <section id="privacy3" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">3.</span>
+                                        How We Share Information
+                                    </h2>
+                                    <div class="section-content">
+                                        <h3>3.1 Service Providers</h3>
+                                        <p>We share information with trusted third parties who assist us in operating our platform:</p>
+                                        <ul class="legal-list">
+                                            <li>Payment processors (Stripe, PayPal)</li>
+                                            <li>Cloud hosting providers (AWS, Google Cloud)</li>
+                                            <li>Customer support platforms</li>
+                                            <li>Email service providers</li>
+                                            <li>Analytics companies (Google Analytics)</li>
+                                        </ul>
+                                        
+                                        <h3>3.2 Legal Requirements</h3>
+                                        <p>We may disclose your information if required by law or in response to:</p>
+                                        <ul class="legal-list">
+                                            <li>Court orders or legal processes</li>
+                                            <li>Government requests</li>
+                                            <li>To protect our rights, privacy, safety, or property</li>
+                                        </ul>
+                                        
+                                        <h3>3.3 Business Transfers</h3>
+                                        <p>In connection with any merger, sale of company assets, financing, or acquisition of all or a portion of our business, your information may be transferred to the acquiring entity.</p>
+                                        
+                                        <div class="info-box">
+                                            <p><i class="fas fa-info-circle"></i> We never sell your personal information to third parties for marketing purposes.</p>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section id="privacy4" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">4.</span>
+                                        Data Security
+                                    </h2>
+                                    <div class="section-content">
+                                        <p>We implement appropriate technical and organizational measures to protect your personal information:</p>
+                                        
+                                        <div class="security-features">
+                                            <div class="security-feature">
+                                                <i class="fas fa-lock"></i>
+                                                <div>
+                                                    <h4>Encryption</h4>
+                                                    <p>Data transmitted between your device and our servers is encrypted using TLS/SSL</p>
+                                                </div>
+                                            </div>
+                                            <div class="security-feature">
+                                                <i class="fas fa-database"></i>
+                                                <div>
+                                                    <h4>Secure Storage</h4>
+                                                    <p>Personal data is stored in secure, access-controlled databases</p>
+                                                </div>
+                                            </div>
+                                            <div class="security-feature">
+                                                <i class="fas fa-user-shield"></i>
+                                                <div>
+                                                    <h4>Access Controls</h4>
+                                                    <p>Strict access controls limit employee access to personal data</p>
+                                                </div>
+                                            </div>
+                                            <div class="security-feature">
+                                                <i class="fas fa-history"></i>
+                                                <div>
+                                                    <h4>Regular Audits</h4>
+                                                    <p>We conduct regular security assessments and penetration testing</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="warning-box">
+                                            <p><i class="fas fa-exclamation-triangle"></i> No method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section id="privacy5" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">5.</span>
+                                        Your Rights and Choices
+                                    </h2>
+                                    <div class="section-content">
+                                        <h3>5.1 Access and Control</h3>
+                                        <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+                                        
+                                        <div class="rights-grid">
+                                            <div class="right-card">
+                                                <h4><i class="fas fa-eye"></i> Right to Access</h4>
+                                                <p>Request a copy of your personal data</p>
+                                            </div>
+                                            <div class="right-card">
+                                                <h4><i class="fas fa-edit"></i> Right to Correct</h4>
+                                                <p>Update inaccurate or incomplete data</p>
+                                            </div>
+                                            <div class="right-card">
+                                                <h4><i class="fas fa-trash-alt"></i> Right to Delete</h4>
+                                                <p>Request deletion of your personal data</p>
+                                            </div>
+                                            <div class="right-card">
+                                                <h4><i class="fas fa-ban"></i> Right to Object</h4>
+                                                <p>Object to certain processing activities</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <h3>5.2 Marketing Communications</h3>
+                                        <p>You can opt out of marketing communications at any time by:</p>
+                                        <ul class="legal-list">
+                                            <li>Clicking the "unsubscribe" link in any marketing email</li>
+                                            <li>Adjusting your notification preferences in account settings</li>
+                                            <li>Contacting our support team</li>
+                                        </ul>
+                                        
+                                        <h3>5.3 Cookies and Tracking</h3>
+                                        <p>Most web browsers allow you to control cookies through their settings preferences. However, limiting cookies may affect your experience on our platform.</p>
+                                    </div>
+                                </section>
+
+                                <section id="privacy6" class="document-section">
+                                    <h2 class="section-title">
+                                        <span class="section-number">6.</span>
+                                        Data Retention
+                                    </h2>
+                                    <div class="section-content">
+                                        <p>We retain your personal information only for as long as necessary to:</p>
+                                        <ul class="legal-list">
+                                            <li>Provide you with the Service</li>
+                                            <li>Comply with legal obligations</li>
+                                            <li>Resolve disputes and enforce agreements</li>
+                                            <li>Maintain business records</li>
+                                        </ul>
+                                        
+                                        <h3>6.1 Retention Periods</h3>
+                                        <table class="retention-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Data Type</th>
+                                                    <th>Retention Period</th>
+                                                    <th>Reason for Retention</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Account Information</td>
+                                                    <td>3 years after account deletion</td>
+                                                    <td>Legal compliance, dispute resolution</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Payment Records</td>
+                                                    <td>7 years</td>
+                                                    <td>Tax and financial regulations</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Usage Data</td>
+                                                    <td>2 years</td>
+                                                    <td>Analytics and improvements</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Support Communications</td>
+                                                    <td>5 years</td>
+                                                    <td>Customer service history</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+
+                                <!-- Remaining Privacy Policy sections would continue here -->
+
+                                <!-- Contact Information -->
+                                <div class="contact-section">
+                                    <h3><i class="fas fa-envelope"></i> Privacy-Related Inquiries</h3>
+                                    <p>For questions about this Privacy Policy or to exercise your privacy rights, contact our Privacy Team:</p>
+                                    <div class="contact-info">
+                                        <p><strong>Email:</strong> <a href="mailto:privacy@skillsync.com">privacy@skillsync.com</a></p>
+                                        <p><strong>Data Protection Officer:</strong> Sarah Johnson</p>
+                                        <p><strong>Mailing Address:</strong></p>
+                                        <address>
+                                            SkillSync Privacy Team<br>
+                                            123 Tech Avenue, Suite 456<br>
+                                            San Francisco, CA 94107<br>
+                                            United States
+                                        </address>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Learning Section -->
+                <div class="footer-section">
+                    <h3>Learning</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-catalog.html">Course Catalog</a></li>
+                        <li><a href="learning-path.html">Learning Paths</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="practice-labs.html">Practice Labs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">Help Center (FAQ)</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog & Resources</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Section -->
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillSync</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2024 SkillSync. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    
+    <!-- Global JS -->
+    <script src="../assets/js/global.js"></script>
+    
+    <!-- Page Specific JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.legal-tab');
+            const documents = document.querySelectorAll('.document');
+            const tocNavs = document.querySelectorAll('.toc-nav');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const documentType = this.dataset.document;
+                    
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show selected document
+                    documents.forEach(doc => doc.classList.remove('active'));
+                    document.getElementById(`${documentType}-document`).classList.add('active');
+                    
+                    // Update TOC
+                    tocNavs.forEach(nav => nav.classList.remove('active'));
+                    document.getElementById(`toc-${documentType}`).classList.add('active');
+                    
+                    // Scroll to top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+            
+            // TOC link highlighting
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute('id');
+                    const tocLink = document.querySelector(`.toc-link[href="#${id}"]`);
+                    
+                    if (entry.isIntersecting) {
+                        document.querySelectorAll('.toc-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        if (tocLink) tocLink.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all document sections
+            document.querySelectorAll('.document-section').forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Print functionality
+            document.querySelectorAll('.print-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    window.print();
+                });
+            });
+        });
+        
+        // Toggle Table of Contents (mobile)
+        function toggleToc() {
+            const tocSidebar = document.getElementById('tocSidebar');
+            tocSidebar.classList.toggle('active');
+            
+            // Prevent scrolling when TOC is open on mobile
+            if (tocSidebar.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+        
+        // Close TOC when clicking outside (mobile)
+        document.addEventListener('click', function(event) {
+            const tocSidebar = document.getElementById('tocSidebar');
+            const tocToggle = document.querySelector('.toc-toggle');
+            
+            if (tocSidebar.classList.contains('active') && 
+                !tocSidebar.contains(event.target) && 
+                !tocToggle.contains(event.target)) {
+                toggleToc();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - SkillSync</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="../assets/css/certifications.css">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="course-catalog.html" class="logo">
+                    <i class="fas fa-graduation-cap fa-lg"></i>
+                    <span>SkillSync</span>
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="learning-path.html" class="nav-link">Learning Path</a></li>
+                    <li><a href="practice-labs.html" class="nav-link">Practice Labs</a></li>
+                    <li><a href="quiz.html" class="nav-link">Quizzes</a></li>
+                    <li><a href="course-catalog.html" class="nav-link">Course Catalog</a></li>
+                </ul>
+
+                <!-- Navigation Actions -->
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="user-actions">
+                        <div class="user-dropdown" id="userDropdown">
+                            <div class="user-avatar" id="avatarTrigger">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="User Avatar">
+                            </div>
+                            <!-- dropdown menu -->
+                            <div class="dropdown-menu">
+                                <a href="profile.html" class="dropdown-item"><i class="fas fa-user"></i> My Profile</a>
+                                <a href="settings.html" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="notifications.html" class="dropdown-item"><i class="fas fa-bell"></i> Notifications</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+            
+            <!-- Mobile slide-out overlay (hidden by default) -->
+            <div class="mobile-nav-overlay" id="mobileOverlay">
+                <div class="mobile-nav-panel">
+                    <button class="close-mobile-btn" id="closeMobileBtn" aria-label="close"><i class="fas fa-times"></i></button>
+                    
+                    <!-- Mobile navigation links (full list) -->
+                    <ul class="mobile-nav-links">
+                        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                        <li><a href="learning-path.html" class="nav-link">Learning Path</a></li>
+                        <li><a href="practice-labs.html" class="nav-link">Practice Labs</a></li>
+                        <li><a href="quiz.html" class="nav-link">Quizzes</a></li>
+                        <li><a href="course-catalog.html" class="nav-link">Course Catalog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="cert-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title animate-fade-in">Prove Your Mastery</h1>
+                        <p class="hero-subtitle">SkillSync Official Certifications</p>
+                        <p class="hero-description">
+                            Validate your expertise with industry-recognized credentials that accelerate 
+                            your career growth and showcase your skills to employers worldwide.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#catalog" class="btn btn-primary btn-lg">
+                                <i class="fas fa-search"></i> Browse Certifications
+                            </a>
+                            <a href="#earned" class="btn btn-outline btn-lg">
+                                <i class="fas fa-award"></i> View My Achievements
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="hero-visual">
+                        <div class="badge-showcase">
+                            <div class="badge-main">
+                                <div class="badge-icon">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="badge-glow"></div>
+                            </div>
+                            <div class="badge-info">
+                                <h4>Digital Credentials</h4>
+                                <p>Share verified badges on LinkedIn, resumes, and portfolios</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">Why You Get Certified?</h2>
+                        <p class="section-subtitle">Accelerate your career with credential</p>
+                    </div>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Career Advancement</h3>
+                        <p>Certified professionals earn 15-25% higher salaries on average.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3>Industry Recognition</h3>
+                        <p>Validate skills with credentials trusted by leading companies.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Skill Verification</h3>
+                        <p>Prove your expertise with verifiable digital credentials.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Network Building</h3>
+                        <p>Join exclusive communities of certified professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Earned Certifications -->
+        <section id="earned" class="earned-section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">My Earned Certifications</h2>
+                        <p class="section-subtitle">Your verified skills and achievements</p>
+                    </div>
+                    <span class="badge badge-primary">3 Certifications</span>
+                </div>
+                
+                <div class="cert-grid">
+                    <!-- Certification 1 -->
+                    <div class="cert-card earned">
+                        <div class="cert-header">
+                            <div class="cert-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="cert-badge">
+                                <span class="badge badge-success">Verified</span>
+                                <span class="badge badge-primary">Premium</span>
+                            </div>
+                        </div>
+                        <div class="cert-body">
+                            <h3 class="cert-title">Full Stack Web Developer</h3>
+                            <p class="cert-description">
+                                Master frontend and backend technologies to build complete web applications.
+                            </p>
+                            <div class="cert-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Earned: Jan 15, 2024</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-fingerprint"></i>
+                                    <span>ID: SS-FSWD-2024-00123</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cert-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                            <a href="#" class="btn btn-view">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certification 2 -->
+                    <div class="cert-card earned">
+                        <div class="cert-header">
+                            <div class="cert-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="cert-badge">
+                                <span class="badge badge-success">Verified</span>
+                                <span class="badge badge-warning">Specialization</span>
+                            </div>
+                        </div>
+                        <div class="cert-body">
+                            <h3 class="cert-title">AWS Solutions Architect</h3>
+                            <p class="cert-description">
+                                Design scalable and reliable distributed systems on AWS.
+                            </p>
+                            <div class="cert-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Earned: Feb 17, 2024</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-fingerprint"></i>
+                                    <span>ID: SS-ASA-2024-04567</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cert-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                            <a href="#" class="btn btn-view">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certification 3 -->
+                    <div class="cert-card earned">
+                        <div class="cert-header">
+                            <div class="cert-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="cert-badge">
+                                <span class="badge badge-success">Verified</span>
+                                <span class="badge badge-warning">Specialization</span>
+                            </div>
+                        </div>
+                        <div class="cert-body">
+                            <h3 class="cert-title">Cybersecurity Analyst</h3>
+                            <p class="cert-description">
+                                Identify threats and protect organizations from cyber attacks.
+                            </p>
+                            <div class="cert-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Earned: Nov 30, 2023</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-fingerprint"></i>
+                                    <span>ID: SS-CSA-2023-08910</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cert-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                            <a href="#" class="btn btn-view">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Empty State -->
+                    <div class="empty-state">
+                        <div class="empty-content">
+                            <div class="empty-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3>Start Your Certification Journey</h3>
+                            <p>Complete courses and earn your first certification</p>
+                            <a href="#catalog" class="btn btn-secondary">Browse Certifications</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- In Progress Section -->
+        <section class="progress-section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">In Progress Certifications</h2>
+                        <p class="section-subtitle">Continue your learning journey</p>
+                    </div>
+                    <a href="learning-path.html" class="btn btn-view">View Learning Path</a>
+                </div>
+                
+                <div class="progress-grid">
+                    <!-- In Progress 1 -->
+                    <div class="progress-card">
+                        <div class="progress-header">
+                            <div class="progress-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="progress-info">
+                                <h3>Data Science Professional</h3>
+                                <span class="progress-status">60% Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <div class="progress-label">3 of 5 courses completed</div>
+                        </div>
+                        <div class="progress-details">
+                            <div class="next-action">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Next: Complete "Advanced ML"</span>
+                            </div>
+                        </div>
+                        <div class="progress-actions">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-play-circle"></i> Continue
+                            </a>
+                            <button class="btn btn-view" data-modal-open="data-science-details">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- In Progress 2 -->
+                    <div class="progress-card">
+                        <div class="progress-header">
+                            <div class="progress-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="progress-info">
+                                <h3>Cloud Solutions Architect</h3>
+                                <span class="progress-status">67% Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 67%"></div>
+                            </div>
+                            <div class="progress-label">4 of 6 courses completed</div>
+                        </div>
+                        <div class="progress-details">
+                            <div class="next-action">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Next: Schedule final certification exam</span>
+                            </div>
+                        </div>
+                        <div class="progress-actions">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-calendar-check"></i> Schedule
+                            </a>
+                            <button class="btn btn-view" data-modal-open="cloud-architect-details">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- In Progress 3 -->
+                    <div class="progress-card">
+                        <div class="progress-header">
+                            <div class="progress-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="progress-info">
+                                <h3>BackEnd Web Developer</h3>
+                                <span class="progress-status">73% Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 73%"></div>
+                            </div>
+                            <div class="progress-label">5 of 7 courses completed</div>
+                        </div>
+                        <div class="progress-details">
+                            <div class="next-action">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Next: Complete final certification exam</span>
+                            </div>
+                        </div>
+                        <div class="progress-actions">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-play-circle"></i> Continue
+                            </a>
+                            <button class="btn btn-view" data-modal-open="cloud-architect-details">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certification Catalog -->
+        <section id="catalog" class="catalog-section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">Certification Catalog</h2>
+                        <p class="section-subtitle">Browse all available certifications</p>
+                    </div>
+                </div>
+
+                <!-- Catalog Filters -->
+                <div class="catalog-filters">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" class="form-control" placeholder="Search certifications..." id="certSearch">
+                        </div>
+                        <div class="filter-tags">
+                            <span class="filter-tag active">All</span>
+                            <span class="filter-tag">Software</span>
+                            <span class="filter-tag">Data</span>
+                            <span class="filter-tag">Security</span>
+                            <span class="filter-tag">Cloud</span>
+                            <span class="filter-tag">Business</span>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-options">
+                        <select class="form-control filter-select">
+                            <option value="all">All Difficulty Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                        <select class="form-control filter-select">
+                            <option value="all">All Formats</option>
+                            <option value="online">Online Exam</option>
+                            <option value="in-person">In-Person</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Catalog Grid -->
+                <div class="catalog-grid">
+                    <!-- Certification 1 -->
+                    <div class="catalog-card">
+                        <div class="catalog-card-header">
+                            <div class="catalog-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="catalog-tags">
+                                <span class="catalog-tag">Development</span>
+                                <span class="catalog-tag catalog-tag-beginner">Beginner</span>
+                            </div>
+                        </div>
+                        <div class="catalog-card-body">
+                            <h3 class="catalog-title">Frontend Web Developer</h3>
+                            <p class="catalog-description">
+                                Master HTML, CSS, JavaScript and modern frameworks to build responsive web interfaces.
+                            </p>
+                            <div class="catalog-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Exam: 2 hours</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$99 or Pro Plan</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-card-footer">
+                            <button class="btn btn-primary" data-modal-open="frontend-details">
+                                View Details
+                            </button>
+                            <a href="course-catalog.html" class="link">
+                                <i class="fas fa-book"></i> Prerequisites
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certification 2 -->
+                    <div class="catalog-card">
+                        <div class="catalog-card-header">
+                            <div class="catalog-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="catalog-tags">
+                                <span class="catalog-tag">Data Science</span>
+                                <span class="catalog-tag catalog-tag-advanced">Advanced</span>
+                            </div>
+                        </div>
+                        <div class="catalog-card-body">
+                            <h3 class="catalog-title">Machine Learning Engineer</h3>
+                            <p class="catalog-description">
+                                Design, build and deploy production-ready machine learning models.
+                            </p>
+                            <div class="catalog-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Exam: 3 hours</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$199</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-card-footer">
+                            <button class="btn btn-primary" data-modal-open="ml-details">
+                                View Details
+                            </button>
+                            <a href="course-catalog.html" class="link">
+                                <i class="fas fa-book"></i> Prerequisites
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certification 3 -->
+                    <div class="catalog-card">
+                        <div class="catalog-card-header">
+                            <div class="catalog-icon">
+                                <i class="fas fa-user-secret"></i>
+                            </div>
+                            <div class="catalog-tags">
+                                <span class="catalog-tag">Cybersecurity</span>
+                                <span class="catalog-tag catalog-tag-intermediate">Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="catalog-card-body">
+                            <h3 class="catalog-title">Ethical Hacker</h3>
+                            <p class="catalog-description">
+                                Identify and exploit vulnerabilities to strengthen security.
+                            </p>
+                            <div class="catalog-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Exam: 4 hours</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$149</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-card-footer">
+                            <button class="btn btn-primary" data-modal-open="hacker-details">
+                                View Details
+                            </button>
+                            <a href="course-catalog.html" class="link">
+                                <i class="fas fa-book"></i> Prerequisites
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-xl">
+                    <a href="#" class="btn btn-lg btn-secondary">
+                        <i class="fas fa-list"></i> View All Certifications (24)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Get Certified?</h2>
+                    <p>Join thousands of professionals who have advanced their careers with SkillSync certifications.</p>
+                    <div class="cta-actions">
+                        <a href="pricing.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-crown"></i> Upgrade to Pro
+                        </a>
+                        <a href="faq.html" class="btn btn-outline btn-lg">
+                            <i class="fas fa-question-circle"></i> Certification FAQ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== MODALS ==================== -->
+    
+    <!-- Data Science Certification Details Modal -->
+    <div class="overlay" data-modal-overlay="data-science-details">
+        <div class="modal modal-lg">
+            <div class="modal-header">
+                <h3><i class="fas fa-chart-line"></i> Data Science Professional - Requirements</h3>
+                <button class="btn btn-sm btn-ghost" data-modal-close aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-section">
+                        <h4>Curriculum Breakdown</h4>
+                        <div class="requirements-list">
+                            <div class="requirement-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Data Analysis with Python</span>
+                                <span class="requirement-status">Completed</span>
+                            </div>
+                            <div class="requirement-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Statistics for Data Science</span>
+                                <span class="requirement-status">Completed</span>
+                            </div>
+                            <div class="requirement-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Machine Learning Fundamentals</span>
+                                <span class="requirement-status">Completed</span>
+                            </div>
+                            <div class="requirement-item in-progress">
+                                <i class="fas fa-spinner"></i>
+                                <span>Advanced Machine Learning</span>
+                                <span class="requirement-status">In Progress</span>
+                            </div>
+                            <div class="requirement-item pending">
+                                <i class="far fa-circle"></i>
+                                <span>Big Data & Cloud Integration</span>
+                                <span class="requirement-status">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h4>Exam Details</h4>
+                        <div class="exam-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">Format:</span>
+                                <span class="stat-value">Proctored Online</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Duration:</span>
+                                <span class="stat-value">180 minutes</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Questions:</span>
+                                <span class="stat-value">85 multiple-choice</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Passing Score:</span>
+                                <span class="stat-value">75%</span>
+                            </div>
+                        </div>
+                        
+                        <h4 class="mt-lg">Study Resources</h4>
+                        <ul class="resource-list">
+                            <li><i class="fas fa-book"></i> Official Study Guide (300 pages)</li>
+                            <li><i class="fas fa-file-alt"></i> Practice Exams (3 full-length)</li>
+                            <li><i class="fas fa-flask"></i> Interactive Labs (50+ hours)</li>
+                            <li><i class="fas fa-users"></i> Community Study Group</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i> Register for Final Exam
+                    </button>
+                    <a href="learning-path.html" class="btn btn-view">
+                        <i class="fas fa-road"></i> View Learning Path
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Learning Section -->
+                <div class="footer-section">
+                    <h3>Learning</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-catalog.html">Course Catalog</a></li>
+                        <li><a href="learning-path.html">Learning Paths</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="practice-labs.html">Practice Labs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">Help Center (FAQ)</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog & Resources</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Section -->
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillSync</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2024 SkillSync. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    
+    <!-- Global JS -->
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/certifications.js"></script>
+    
+    <!-- Page Specific JS -->
+    <script>
+        // Simple page interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter tags interaction
+            const filterTags = document.querySelectorAll('.filter-tag');
+            filterTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    filterTags.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Simple search filter
+            const searchInput = document.getElementById('certSearch');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    const cards = document.querySelectorAll('.catalog-card');
+                    
+                    cards.forEach(card => {
+                        const title = card.querySelector('.catalog-title').textContent.toLowerCase();
+                        const description = card.querySelector('.catalog-description').textContent.toLowerCase();
+                        
+                        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

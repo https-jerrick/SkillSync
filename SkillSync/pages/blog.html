@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Resources - SkillSync</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+</head>
+<body>
+    <!-- HEADER - FIXED NAVBAR WITH WORKING MENU -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo (Left Side) -->
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillSync</span>
+                </a>
+
+                <!-- Desktop Navigation (Visible on large screens) -->
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing Plans</a></li>
+                    <li><a href="faq.html" class="nav-link">Help Center</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog & Resources</a></li>
+                    <li><a href="terms.html" class="nav-link">Policies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+
+                <!-- Right Side Actions -->
+                <div class="nav-actions">
+                    <!-- Auth Buttons -->
+                    <div class="auth-buttons">
+                        <a href="auth.html" class="btn btn-outline1">Sign In</a>
+                        <a href="auth.html" class="btn btn-primary">Register</a>
+                    </div>
+
+                    <!-- Search Button -->
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY (This is crucial for mobile navigation) -->
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-panel">
+            <button class="close-mobile-btn" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <!-- Mobile Navigation Links (All pages here) -->
+            <ul class="mobile-nav-links">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing Plans</a></li>
+                    <li><a href="faq.html" class="nav-link">Help Center</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog & Resources</a></li>
+                    <li><a href="terms.html" class="nav-link">Policies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            
+            <!-- Mobile Auth Buttons -->
+            <div class="mobile-extra">
+                <div class="mobile-auth-buttons">
+                    <a href="auth.html" class="btn btn-outline1">Sign In</a>
+                    <a href="auth.html" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Stay Ahead of the Curve: Insights, Guides, and Industry News</h1>
+                    <p class="hero-subtitle">Free learning resources, career tips, and deep dives into the latest tech and business trends.</p>
+                    <div class="hero-search">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search articles, guides, and resources..." class="search-input">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Content Carousel -->
+        <section class="featured-carousel">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Articles</h2>
+                    <p>Top picks from our editorial team</p>
+                </div>
+                
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide active">
+                            <div class="slide-content">
+                                <div class="slide-image">
+                                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                         alt="Future of AI in Education">
+                                </div>
+                                <div class="slide-info">
+                                    <span class="category-tag featured">Featured</span>
+                                    <h3>The Future of AI in Online Learning: 2024 Trends</h3>
+                                    <p class="slide-excerpt">Discover how artificial intelligence is revolutionizing personalized education and what it means for your learning journey.</p>
+                                    <div class="slide-meta">
+                                        <div class="author">
+                                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                                 alt="Author" class="author-avatar">
+                                            <div>
+                                                <span class="author-name">Dr. Sarah Chen</span>
+                                                <span class="post-date">Dec 15, 2024 · 8 min read</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary read-more">
+                                            Read Article <i class="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="slide-image">
+                                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                         alt="Remote Work Skills">
+                                </div>
+                                <div class="slide-info">
+                                    <span class="category-tag career">Career</span>
+                                    <h3>Essential Skills for Remote Work Success in 2024</h3>
+                                    <p class="slide-excerpt">Master the skills that will make you indispensable in today's remote work environment.</p>
+                                    <div class="slide-meta">
+                                        <div class="author">
+                                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                                 alt="Author" class="author-avatar">
+                                            <div>
+                                                <span class="author-name">Michael Rodriguez</span>
+                                                <span class="post-date">Dec 12, 2024 · 6 min read</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary read-more">
+                                            Read Article <i class="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="slide-image">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                         alt="Data Science Career Path">
+                                </div>
+                                <div class="slide-info">
+                                    <span class="category-tag guides">Guides</span>
+                                    <h3>Complete Roadmap to Becoming a Data Scientist in 2024</h3>
+                                    <p class="slide-excerpt">A step-by-step guide covering skills, tools, and strategies to launch your data science career.</p>
+                                    <div class="slide-meta">
+                                        <div class="author">
+                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                                 alt="Author" class="author-avatar">
+                                            <div>
+                                                <span class="author-name">Alex Thompson</span>
+                                                <span class="post-date">Dec 10, 2024 · 12 min read</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary read-more">
+                                            Read Article <i class="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <button class="carousel-prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="carousel-dots">
+                            <button class="dot active" data-slide="0"></button>
+                            <button class="dot" data-slide="1"></button>
+                            <button class="dot" data-slide="2"></button>
+                        </div>
+                        <button class="carousel-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <section class="blog-main">
+            <div class="container">
+                <div class="blog-layout">
+                    <!-- Sidebar -->
+                    <aside class="blog-sidebar">
+                        <div class="sidebar-section">
+                            <h3>Search & Filter</h3>
+                            
+                            <!-- Categories -->
+                            <div class="filter-group">
+                                <h4>Topic Categories</h4>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span>Career Advice</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span>Industry Trends</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span>Course Updates</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span>How-To Guides</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span>Tech News</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span>Learning Tips</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Content Type -->
+                            <div class="filter-group">
+                                <h4>Content Type</h4>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="contentType" checked>
+                                        <span>All Types</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="contentType">
+                                        <span>Articles</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="contentType">
+                                        <span>Video Summaries</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="contentType">
+                                        <span>Infographics</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="contentType">
+                                        <span>eBooks</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Time to Read -->
+                            <div class="filter-group">
+                                <h4>Time to Read</h4>
+                                <select class="filter-select">
+                                    <option>Any Duration</option>
+                                    <option>Under 5 minutes</option>
+                                    <option>5-10 minutes</option>
+                                    <option>10-20 minutes</option>
+                                    <option>20+ minutes</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Date Range -->
+                            <div class="filter-group">
+                                <h4>Date Range</h4>
+                                <select class="filter-select">
+                                    <option>All Time</option>
+                                    <option>Last 7 days</option>
+                                    <option>Last 30 days</option>
+                                    <option>Last 3 months</option>
+                                    <option>Last 6 months</option>
+                                </select>
+                            </div>
+                            
+                            <button class="btn btn-secondary btn-block">
+                                <i class="fas fa-filter"></i> Apply Filters
+                            </button>
+                            <button class="btn btn-outline btn-block">
+                                <i class="fas fa-redo"></i> Reset Filters
+                            </button>
+                        </div>
+                        
+                        <!-- Popular Tags -->
+                        <div class="sidebar-section">
+                            <h3>Popular Tags</h3>
+                            <div class="tags-cloud">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">AI</span>
+                                <span class="tag">Career Growth</span>
+                                <span class="tag">Web Development</span>
+                                <span class="tag">Data Science</span>
+                                <span class="tag">Remote Work</span>
+                                <span class="tag">Cloud Computing</span>
+                                <span class="tag">Interview Tips</span>
+                                <span class="tag">Productivity</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Newsletter Sidebar -->
+                        <div class="sidebar-section newsletter-sidebar">
+                            <div class="newsletter-icon">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                            <h3>Weekly Digest</h3>
+                            <p>Get the latest articles and resources delivered to your inbox.</p>
+                            <div class="newsletter-form">
+                                <input type="email" placeholder="Your email address" class="form-control">
+                                <button class="btn btn-primary btn-block">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <div class="blog-content">
+                        <!-- Resource Grid -->
+                        <div class="resource-header">
+                            <h2>Latest Resources</h2>
+                            <div class="sort-options">
+                                <span>Sort by:</span>
+                                <select class="sort-select">
+                                    <option>Latest</option>
+                                    <option>Most Popular</option>
+                                    <option>Most Viewed</option>
+                                    <option>Alphabetical</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-grid">
+                            <!-- Resource 1 -->
+                            <article class="resource-card">
+                                <div class="resource-image">
+                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                         alt="Web Development">
+                                    <span class="content-type">
+                                        <i class="fas fa-newspaper"></i> Article
+                                    </span>
+                                </div>
+                                <div class="resource-content">
+                                    <span class="category-tag web">Web Dev</span>
+                                    <h3>Modern JavaScript Frameworks Comparison 2024</h3>
+                                    <p class="resource-excerpt">Comparing React, Vue, Angular, and Svelte for your next project. Which one should you choose?</p>
+                                    <div class="resource-meta">
+                                        <span><i class="far fa-calendar"></i> Dec 14, 2024</span>
+                                        <span><i class="far fa-clock"></i> 7 min read</span>
+                                    </div>
+                                    <button class="btn btn-outline">
+                                        Read Article <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            
+                            <!-- Resource 2 -->
+                            <article class="resource-card">
+                                <div class="resource-image">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                         alt="Data Science">
+                                    <span class="content-type">
+                                        <i class="fas fa-play-circle"></i> Video
+                                    </span>
+                                </div>
+                                <div class="resource-content">
+                                    <span class="category-tag data">Data Science</span>
+                                    <h3>Machine Learning Model Deployment Best Practices</h3>
+                                    <p class="resource-excerpt">Learn how to deploy your ML models efficiently in production environments.</p>
+                                    <div class="resource-meta">
+                                        <span><i class="far fa-calendar"></i> Dec 13, 2024</span>
+                                        <span><i class="far fa-clock"></i> 15 min watch</span>
+                                    </div>
+                                    <button class="btn btn-outline">
+                                        Watch Video <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            
+                            <!-- Resource 3 -->
+                            <article class="resource-card">
+                                <div class="resource-image">
+                                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                         alt="Cloud Computing">
+                                    <span class="content-type">
+                                        <i class="fas fa-newspaper"></i> Article
+                                    </span>
+                                </div>
+                                <div class="resource-content">
+                                    <span class="category-tag cloud">Cloud</span>
+                                    <h3>Cloud Cost Optimization Strategies for Startups</h3>
+                                    <p class="resource-excerpt">Reduce your cloud spending by 40% with these proven optimization techniques.</p>
+                                    <div class="resource-meta">
+                                        <span><i class="far fa-calendar"></i> Dec 12, 2024</span>
+                                        <span><i class="far fa-clock"></i> 9 min read</span>
+                                    </div>
+                                    <button class="btn btn-outline">
+                                        Read Article <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            
+                            <!-- Resource 4 -->
+                            <article class="resource-card">
+                                <div class="resource-image">
+                                    <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                         alt="Mobile Development">
+                                    <span class="content-type">
+                                        <i class="fas fa-chart-pie"></i> Infographic
+                                    </span>
+                                </div>
+                                <div class="resource-content">
+                                    <span class="category-tag mobile">Mobile</span>
+                                    <h3>Mobile App Development Trends 2024</h3>
+                                    <p class="resource-excerpt">Visual guide to the latest trends in iOS and Android development.</p>
+                                    <div class="resource-meta">
+                                        <span><i class="far fa-calendar"></i> Dec 11, 2024</span>
+                                        <span><i class="far fa-clock"></i> 3 min read</span>
+                                    </div>
+                                    <button class="btn btn-outline">
+                                        View Infographic <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            
+                            <!-- Resource 5 -->
+                            <article class="resource-card">
+                                <div class="resource-image">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                         alt="Cybersecurity">
+                                    <span class="content-type">
+                                        <i class="fas fa-newspaper"></i> Article
+                                    </span>
+                                </div>
+                                <div class="resource-content">
+                                    <span class="category-tag security">Security</span>
+                                    <h3>Essential Cybersecurity Practices for Developers</h3>
+                                    <p class="resource-excerpt">Protect your applications from common security vulnerabilities with these best practices.</p>
+                                    <div class="resource-meta">
+                                        <span><i class="far fa-calendar"></i> Dec 10, 2024</span>
+                                        <span><i class="far fa-clock"></i> 11 min read</span>
+                                    </div>
+                                    <button class="btn btn-outline">
+                                        Read Article <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            
+                            <!-- Resource 6 -->
+                            <article class="resource-card">
+                                <div class="resource-image">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                         alt="DevOps">
+                                    <span class="content-type">
+                                        <i class="fas fa-play-circle"></i> Video
+                                    </span>
+                                </div>
+                                <div class="resource-content">
+                                    <span class="category-tag devops">DevOps</span>
+                                    <h3>CI/CD Pipeline Setup from Scratch</h3>
+                                    <p class="resource-excerpt">Step-by-step tutorial on building a complete CI/CD pipeline using GitHub Actions and Docker.</p>
+                                    <div class="resource-meta">
+                                        <span><i class="far fa-calendar"></i> Dec 9, 2024</span>
+                                        <span><i class="far fa-clock"></i> 22 min watch</span>
+                                    </div>
+                                    <button class="btn btn-outline">
+                                        Watch Video <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <!-- Load More -->
+                        <div class="load-more">
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-plus"></i> Load More Articles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloadable Resources -->
+        <section class="downloadables-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Free Resources & Templates</h2>
+                    <p>Downloadable guides, templates, and cheat sheets</p>
+                </div>
+                
+                <div class="downloadables-grid">
+                    <div class="downloadable-card">
+                        <div class="downloadable-cover">
+                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Developer Interview Guide">
+                            <div class="download-badge">
+                                <i class="fas fa-download"></i> Free Download
+                            </div>
+                        </div>
+                        <div class="downloadable-content">
+                            <h3>The Ultimate Developer Interview Guide</h3>
+                            <p class="downloadable-description">Comprehensive guide covering technical questions, coding challenges, and behavioral interviews for top tech companies.</p>
+                            <div class="downloadable-meta">
+                                <span><i class="fas fa-file-pdf"></i> PDF, 45 pages</span>
+                                <span><i class="fas fa-download"></i> 2.4k downloads</span>
+                            </div>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-lock"></i> Download Free Guide
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="downloadable-card">
+                        <div class="downloadable-cover">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Project Management Templates">
+                            <div class="download-badge">
+                                <i class="fas fa-download"></i> Free Templates
+                            </div>
+                        </div>
+                        <div class="downloadable-content">
+                            <h3>Agile Project Management Templates</h3>
+                            <p class="downloadable-description">Complete set of templates for sprint planning, backlog management, and team retrospectives.</p>
+                            <div class="downloadable-meta">
+                                <span><i class="fas fa-file-excel"></i> Excel, 12 templates</span>
+                                <span><i class="fas fa-download"></i> 1.8k downloads</span>
+                            </div>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-lock"></i> Get Templates
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="downloadable-card">
+                        <div class="downloadable-cover">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Python Cheat Sheet">
+                            <div class="download-badge">
+                                <i class="fas fa-download"></i> Free Cheat Sheet
+                            </div>
+                        </div>
+                        <div class="downloadable-content">
+                            <h3>Python Programming Cheat Sheet</h3>
+                            <p class="downloadable-description">Quick reference guide covering Python syntax, data structures, and popular libraries.</p>
+                            <div class="downloadable-meta">
+                                <span><i class="fas fa-file-pdf"></i> PDF, 6 pages</span>
+                                <span><i class="fas fa-download"></i> 3.1k downloads</span>
+                            </div>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-lock"></i> Download Cheat Sheet
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Get Skill Insights Weekly</h2>
+                        <p>Subscribe to our newsletter and receive curated content, career tips, and industry insights directly in your inbox.</p>
+                        <div class="newsletter-stats">
+                            <div class="stat">
+                                <span class="stat-number">25k+</span>
+                                <span class="stat-label">Subscribers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Open Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Enter your email address" class="form-control" required>
+                        </div>
+                        <button class="btn btn-primary">
+                            Subscribe Now <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <p class="form-note">No spam. Unsubscribe anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Learning</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-catalog.html">Course Catalog</a></li>
+                        <li><a href="learning-path.html">Learning Paths</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="practice-labs.html">Practice Labs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">Help Center (FAQ)</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog & Resources</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillSync</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2024 SkillSync. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/blog.js"></script>
+</body>
+</html>

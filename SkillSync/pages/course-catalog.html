@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog - SkillSync | Browse All Courses</title>
+    <meta name="description" content="Browse SkillSync's complete course catalog. Find courses in programming, data science, design, business, and more.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/course-catalog.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="course-catalog.html" class="logo">
+                    <i class="fas fa-graduation-cap fa-lg"></i>
+                    <span>SkillSync</span>
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="learning-path.html" class="nav-link">Learning Path</a></li>
+                    <li><a href="practice-labs.html" class="nav-link">Practice Labs</a></li>
+                    <li><a href="quiz.html" class="nav-link">Quizzes</a></li>
+                    <li><a href="course-catalog.html" class="nav-link">Course Catalog</a></li>
+                </ul>
+
+                <!-- Navigation Actions -->
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="user-actions">
+                        <div class="user-dropdown" id="userDropdown">
+                            <div class="user-avatar" id="avatarTrigger">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="User Avatar">
+                            </div>
+                            <!-- dropdown menu -->
+                            <div class="dropdown-menu">
+                                <a href="profile.html" class="dropdown-item"><i class="fas fa-user"></i> My Profile</a>
+                                <a href="settings.html" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="notifications.html" class="dropdown-item"><i class="fas fa-bell"></i> Notifications</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+            
+            <!-- Mobile slide-out overlay (hidden by default) -->
+            <div class="mobile-nav-overlay" id="mobileOverlay">
+                <div class="mobile-nav-panel">
+                    <button class="close-mobile-btn" id="closeMobileBtn" aria-label="close"><i class="fas fa-times"></i></button>
+                    
+                    <!-- Mobile navigation links (full list) -->
+                    <ul class="mobile-nav-links">
+                        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                        <li><a href="learning-path.html" class="nav-link">Learning Path</a></li>
+                        <li><a href="practice-labs.html" class="nav-link">Practice Labs</a></li>
+                        <li><a href="quiz.html" class="nav-link">Quizzes</a></li>
+                        <li><a href="course-catalog.html" class="nav-link">Course Catalog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-content">
+        <!-- Catalog Banner -->
+        <section class="catalog-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <h1>Explore Our Full Course Catalog</h1>
+                    <p class="banner-subtitle">Find the perfect path to master your next skill. Browse 500+ courses across all skill levels.</p>
+                    
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" 
+                                   class="search-input" 
+                                   placeholder="Search courses by keyword, topic, or instructor..."
+                                   id="courseSearch">
+                            <button class="btn btn-primary search-button">Search</button>
+                        </div>
+                        <div class="search-tags">
+                            <span class="search-tag">Popular:</span>
+                            <button class="tag-btn" data-search="python">Python</button>
+                            <button class="tag-btn" data-search="javascript">JavaScript</button>
+                            <button class="tag-btn" data-search="data science">Data Science</button>
+                            <button class="tag-btn" data-search="web development">Web Development</button>
+                            <button class="tag-btn" data-search="ui ux design">UI/UX Design</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalog Content -->
+        <section class="catalog-content">
+            <div class="container">
+                <div class="catalog-layout">
+                    <!-- Filter Sidebar -->
+                    <aside class="filter-sidebar">
+                        <div class="sidebar-header">
+                            <h3>Filter Courses</h3>
+                            <button class="btn btn-outline btn-sm" style="color: var(--text-color); border: 1px solid var(--border-color);" id="clearFilters">Clear All</button>
+                        </div>
+                        
+                        <!-- Category Filter -->
+                        <div class="filter-group">
+                            <h4 class="filter-title">
+                                <i class="fas fa-folder"></i>
+                                Category
+                            </h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="programming" class="filter-checkbox" data-category="programming">
+                                    <span class="checkmark"></span>
+                                    <span class="option-label">Programming</span>
+                                    <span class="option-count">156</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="data-science" class="filter-checkbox" data-category="data-science">
+                                    <span class="checkmark"></span>
+                                    <span class="option-label">Data Science</span>
+                                    <span class="option-count">89</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="design" class="filter-checkbox" data-category="design">
+                                    <span class="checkmark"></span>
+                                    <span class="option-label">Design</span>
+                                    <span class="option-count">67</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="business" class="filter-checkbox" data-category="business">
+                                    <span class="checkmark"></span>
+                                    <span class="option-label">Business</span>
+                                    <span class="option-count">54</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="cloud-devops" class="filter-checkbox" data-category="cloud-devops">
+                                    <span class="checkmark"></span>
+                                    <span class="option-label">Cloud & DevOps</span>
+                                    <span class="option-count">42</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="marketing" class="filter-checkbox" data-category="marketing">
+                                    <span class="checkmark"></span>
+                                    <span class="option-label">Marketing</span>
+                                    <span class="option-count">38</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Level Filter -->
+                        <div class="filter-group">
+                            <h4 class="filter-title">
+                                <i class="fas fa-chart-line"></i>
+                                Level
+                            </h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="radio" name="level" value="all" class="filter-radio" data-level="all" checked>
+                                    <span class="checkmark radio"></span>
+                                    <span class="option-label">All Levels</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="level" value="beginner" class="filter-radio" data-level="beginner">
+                                    <span class="checkmark radio"></span>
+                                    <span class="option-label">Beginner</span>
+                                    <span class="option-count">203</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="level" value="intermediate" class="filter-radio" data-level="intermediate">
+                                    <span class="checkmark radio"></span>
+                                    <span class="option-label">Intermediate</span>
+                                    <span class="option-count">187</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="level" value="advanced" class="filter-radio" data-level="advanced">
+                                    <span class="checkmark radio"></span>
+                                    <span class="option-label">Advanced</span>
+                                    <span class="option-count">110</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Price Filter -->
+                        <div class="filter-group">
+                            <h4 class="filter-title">
+                                <i class="fas fa-tag"></i>
+                                Price
+                            </h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="radio" name="price" value="all" class="filter-radio" data-price="all" checked>
+                                    <span class="checkmark radio"></span>
+                                    <span class="option-label">All Courses</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="price" value="free" class="filter-radio" data-price="free">
+                                    <span class="checkmark radio"></span>
+                                    <span class="option-label">Free</span>
+                                    <span class="option-count">45</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="price" value="paid" class="filter-radio" data-price="paid">
+                                    <span class="checkmark radio"></span>
+                                    <span class="option-label">Paid</span>
+                                    <span class="option-count">455</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Rating Filter -->
+                        <div class="filter-group">
+                            <h4 class="filter-title">
+                                <i class="fas fa-star"></i>
+                                Rating
+                            </h4>
+                            <div class="rating-filter">
+                                <div class="rating-options">
+                                    <button class="rating-option active" data-rating="all">All Ratings</button>
+                                    <button class="rating-option" data-rating="4">
+                                        <span class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        4.0+
+                                    </button>
+                                    <button class="rating-option" data-rating="4.5">
+                                        <span class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </span>
+                                        4.5+
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content Area -->
+                    <div class="catalog-main">
+                        <!-- Results Header -->
+                        <div class="results-header">
+                            <div class="results-info">
+                                <h3>Courses Found: <span id="courseCount">12</span></h3>
+                                <p class="results-subtitle">Showing courses matching your criteria</p>
+                            </div>
+                            <div class="sort-options">
+                                <label for="sortSelect">Sort by:</label>
+                                <select id="sortSelect" class="sort-select">
+                                    <option value="default">Best Match</option>
+                                    <option value="newest">Newest</option>
+                                    <option value="rating">Highest Rated</option>
+                                    <option value="popular">Most Popular</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="duration">Duration</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Courses Grid -->
+                        <div class="courses-grid">
+                            <!-- Course 1: Programming -->
+                            <div class="course-card" data-category="programming" data-level="beginner" data-price="paid" data-rating="4.8">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         alt="Web Development Course">
+                                    <div class="course-badge badge-popular">Popular</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">PROGRAMMING</div>
+                                    <h3 class="course-title">Complete Web Development Bootcamp 2024</h3>
+                                    <p class="course-description">Master HTML, CSS, JavaScript, React, Node.js and build real-world projects from scratch.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="Alex Johnson">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">Alex Johnson</div>
+                                                <div class="instructor-title">Senior Developer</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.8
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                48h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price">$89.99</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Course 2: Data Science -->
+                            <div class="course-card" data-category="data-science" data-level="intermediate" data-price="paid" data-rating="4.9">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         alt="Data Science Course">
+                                    <div class="course-badge badge-popular">Popular</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">DATA SCIENCE</div>
+                                    <h3 class="course-title">Data Science & Machine Learning A-Z</h3>
+                                    <p class="course-description">Learn Python, Pandas, NumPy, Scikit-learn, and TensorFlow for data analysis and ML models.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="Maria Garcia">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">Maria Garcia</div>
+                                                <div class="instructor-title">Data Scientist</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.9
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                60h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price">$99.99</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Course 3: Design -->
+                            <div class="course-card" data-category="design" data-level="beginner" data-price="paid" data-rating="4.7">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         alt="UI/UX Design Course">
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">DESIGN</div>
+                                    <h3 class="course-title">UI/UX Design Masterclass 2024</h3>
+                                    <p class="course-description">From Figma fundamentals to advanced prototyping, user research, and design systems.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="David Kim">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">David Kim</div>
+                                                <div class="instructor-title">Design Lead</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.7
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                36h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price">$79.99</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Course 4: Cloud & DevOps -->
+                            <div class="course-card" data-category="cloud-devops" data-level="advanced" data-price="paid" data-rating="4.8">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         alt="Cloud Computing Course">
+                                    <div class="course-badge badge-new">New</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">CLOUD & DEVOPS</div>
+                                    <h3 class="course-title">AWS Certified Solutions Architect</h3>
+                                    <p class="course-description">Complete guide to AWS services, architecture patterns, and best practices for the certification.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="Sarah Williams">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">Sarah Williams</div>
+                                                <div class="instructor-title">Cloud Architect</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.8
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                42h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price">$94.99</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Course 5: Programming (Free) -->
+                            <div class="course-card" data-category="programming" data-level="beginner" data-price="free" data-rating="4.6">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                         alt="Python Course">
+                                    <div class="course-badge badge-free">Free</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">PROGRAMMING</div>
+                                    <h3 class="course-title">Python for Beginners</h3>
+                                    <p class="course-description">Learn Python programming from scratch with hands-on exercises and real-world projects.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="James Wilson">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">James Wilson</div>
+                                                <div class="instructor-title">Python Developer</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.6
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                24h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price free">Free</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Course 6: Marketing -->
+                            <div class="course-card" data-category="marketing" data-level="intermediate" data-price="paid" data-rating="4.5">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         alt="Digital Marketing Course">
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">MARKETING</div>
+                                    <h3 class="course-title">Digital Marketing Strategy</h3>
+                                    <p class="course-description">Master SEO, social media marketing, content strategy, and data-driven growth techniques.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="Lisa Chen">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">Lisa Chen</div>
+                                                <div class="instructor-title">Marketing Director</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.5
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                32h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price">$69.99</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Course 7: Data Science -->
+                            <div class="course-card" data-category="data-science" data-level="intermediate" data-price="paid" data-rating="4.7">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         alt="Machine Learning Course">
+                                    <div class="course-badge badge-popular">Popular</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">DATA SCIENCE</div>
+                                    <h3 class="course-title">Machine Learning Fundamentals</h3>
+                                    <p class="course-description">Learn core ML concepts, algorithms, and implement models using Python and Scikit-learn.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="Michael Brown">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">Michael Brown</div>
+                                                <div class="instructor-title">ML Engineer</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.7
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                45h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price">$84.99</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Course 8: Programming -->
+                            <div class="course-card" data-category="programming" data-level="intermediate" data-price="paid" data-rating="4.8">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         alt="Mobile Development Course">
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">PROGRAMMING</div>
+                                    <h3 class="course-title">iOS & Android Development</h3>
+                                    <p class="course-description">Build native mobile apps for iOS and Android using Swift, Kotlin, and React Native.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="Emily Davis">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">Emily Davis</div>
+                                                <div class="instructor-title">Mobile Developer</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.8
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                54h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price">$89.99</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Course 9: Business -->
+                            <div class="course-card" data-category="business" data-level="beginner" data-price="paid" data-rating="4.6">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         alt="Business Analytics Course">
+                                    <div class="course-badge badge-new">New</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">BUSINESS</div>
+                                    <h3 class="course-title">Business Analytics with Excel & SQL</h4>
+                                    <p class="course-description">Master data analysis techniques for business decision making using Excel and SQL.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="Robert Taylor">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">Robert Taylor</div>
+                                                <div class="instructor-title">Business Analyst</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.6
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                28h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price">$74.99</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Course 10: Programming -->
+                            <div class="course-card" data-category="programming" data-level="advanced" data-price="paid" data-rating="4.8">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         alt="DevOps Course">
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">PROGRAMMING</div>
+                                    <h3 class="course-title">DevOps Engineering</h3>
+                                    <p class="course-description">Master Docker, Kubernetes, CI/CD pipelines, and infrastructure as code for modern DevOps.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="Chris Wilson">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">Chris Wilson</div>
+                                                <div class="instructor-title">DevOps Engineer</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.8
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                52h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price">$96.99</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Course 11: Design -->
+                            <div class="course-card" data-category="design" data-level="intermediate" data-price="paid" data-rating="4.7">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         alt="Graphic Design Course">
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">DESIGN</div>
+                                    <h3 class="course-title">Graphic Design Mastery</h3>
+                                    <p class="course-description">Learn Adobe Creative Suite, typography, color theory, and visual communication principles.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="Sophia Lee">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">Sophia Lee</div>
+                                                <div class="instructor-title">Graphic Designer</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.7
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                40h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price">$72.99</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Course 12: Business (Free) -->
+                            <div class="course-card" data-category="business" data-level="beginner" data-price="free" data-rating="4.5">
+                                <div class="course-image">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                         alt="Entrepreneurship Course">
+                                    <div class="course-badge badge-free">Free</div>
+                                </div>
+                                <div class="course-content">
+                                    <div class="course-category">BUSINESS</div>
+                                    <h3 class="course-title">Entrepreneurship Fundamentals</h3>
+                                    <p class="course-description">Learn how to start and grow a successful business from ideation to execution.</p>
+                                    
+                                    <div class="course-meta">
+                                        <div class="instructor">
+                                            <div class="instructor-avatar">
+                                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                                     alt="Mark Thompson">
+                                            </div>
+                                            <div class="instructor-info">
+                                                <div class="instructor-name">Mark Thompson</div>
+                                                <div class="instructor-title">Entrepreneur</div>
+                                            </div>
+                                        </div>
+                                        <div class="course-stats">
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                4.5
+                                            </div>
+                                            <div class="duration">
+                                                <i class="fas fa-clock"></i>
+                                                20h
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-footer">
+                                        <div class="price free">Free</div>
+                                        <button class="course-action">
+                                            View Course
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <button class="pagination-btn prev-btn" disabled>
+                                <i class="fas fa-chevron-left"></i> Previous
+                            </button>
+                            <div class="page-numbers">
+                                <button class="page-btn active">1</button>
+                                <button class="page-btn">2</button>
+                                <button class="page-btn">3</button>
+                                <span class="page-dots">...</span>
+                                <button class="page-btn">5</button>
+                            </div>
+                            <button class="pagination-btn next-btn">
+                                Next <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Learning Paths -->
+        <section class="featured-paths">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Learning Paths</h2>
+                    <p class="section-subtitle">Structured paths for career mastery</p>
+                    <a href="learning-path.html" class="btn btn-outline">
+                        View All Paths <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="paths-grid">
+                    <!-- Path 1 -->
+                    <div class="path-card">
+                        <div class="path-image">
+                            <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                 alt="Full Stack Development">
+                        </div>
+                        <div class="path-content">
+                            <div class="path-category">Programming</div>
+                            <h3 class="path-title">Full Stack Web Developer</h3>
+                            <p class="path-description">Become a full-stack developer with this comprehensive path covering frontend and backend technologies.</p>
+                            <div class="path-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-book"></i>
+                                    <span>8 Course</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>240 Hours</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>12,345</span>
+                                </div>
+                            </div>
+                            <div class="path-skills">
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                            </div>
+                            <a href="learning-path.html" class="btn btn-primary btn-block">View Path Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Path 2 -->
+                    <div class="path-card">
+                        <div class="path-image">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                 alt="Data Science">
+                        </div>
+                        <div class="path-content">
+                            <div class="path-category">Data Science</div>
+                            <h3 class="path-title">Data Scientist Career Path</h3>
+                            <p class="path-description">Master data analysis, machine learning, and visualization to become a professional data scientist.</p>
+                            <div class="path-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-book"></i>
+                                    <span>10 Courses</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>300 Hours</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>8,765</span>
+                                </div>
+                            </div>
+                            <div class="path-skills">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">Tableau</span>
+                            </div>
+                            <a href="learning-path.html" class="btn btn-primary btn-block">View Path Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Path 3 -->
+                    <div class="path-card">
+                        <div class="path-image">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                 alt="UI/UX Design">
+                        </div>
+                        <div class="path-content">
+                            <div class="path-category">Design</div>
+                            <h3 class="path-title">UI/UX Designer Mastery</h3>
+                            <p class="path-description">Learn user research, wireframing, prototyping, and design systems for modern digital products.</p>
+                            <div class="path-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-book"></i>
+                                    <span>6 Courses</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>180 Hours</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>5,432</span>
+                                </div>
+                            </div>
+                            <div class="path-skills">
+                                <span class="skill-tag">Figma</span>
+                                <span class="skill-tag">User Research</span>
+                                <span class="skill-tag">Prototyping</span>
+                                <span class="skill-tag">Design Systems</span>
+                            </div>
+                            <a href="learning-path.html" class="btn btn-primary btn-block">View Path Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER SECTION ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Learning Section -->
+                <div class="footer-section">
+                    <h3>Learning</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-catalog.html">Course Catalog</a></li>
+                        <li><a href="learning-path.html">Learning Paths</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="practice-labs.html">Practice Labs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">Help Center (FAQ)</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog & Resources</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Section -->
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillSync</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2024 SkillSync. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/course-catalog.js"></script>
+</body>
+</html>

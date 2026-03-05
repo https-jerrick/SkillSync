@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress & Analytics | SkillSync</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/analytics.css">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="course-catalog.html" class="logo">
+                    <i class="fas fa-graduation-cap fa-lg"></i>
+                    <span>SkillSync</span>
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="learning-path.html" class="nav-link">Learning Path</a></li>
+                    <li><a href="practice-labs.html" class="nav-link">Practice Labs</a></li>
+                    <li><a href="quiz.html" class="nav-link">Quizzes</a></li>
+                    <li><a href="course-catalog.html" class="nav-link">Course Catalog</a></li>
+                </ul>
+
+                <!-- Navigation Actions -->
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="user-actions">
+                        <div class="user-dropdown" id="userDropdown">
+                            <div class="user-avatar" id="avatarTrigger">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="User Avatar">
+                            </div>
+                            <!-- dropdown menu -->
+                            <div class="dropdown-menu">
+                                <a href="profile.html" class="dropdown-item"><i class="fas fa-user"></i> My Profile</a>
+                                <a href="settings.html" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="notifications.html" class="dropdown-item"><i class="fas fa-bell"></i> Notifications</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+            
+            <!-- Mobile slide-out overlay (hidden by default) -->
+            <div class="mobile-nav-overlay" id="mobileOverlay">
+                <div class="mobile-nav-panel">
+                    <button class="close-mobile-btn" id="closeMobileBtn" aria-label="close"><i class="fas fa-times"></i></button>
+                    
+                    <!-- Mobile navigation links (full list) -->
+                    <ul class="mobile-nav-links">
+                        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                        <li><a href="learning-path.html" class="nav-link">Learning Path</a></li>
+                        <li><a href="practice-labs.html" class="nav-link">Practice Labs</a></li>
+                        <li><a href="quiz.html" class="nav-link">Quizzes</a></li>
+                        <li><a href="course-catalog.html" class="nav-link">Course Catalog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Progress & Analytics</h1>
+                <p class="page-subtitle">Track your learning journey, monitor performance, and get personalized recommendations</p>
+            </div>
+        </section>
+
+        <!-- Summary Metrics -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Summary Metrics</h2>
+                    <p class="section-subtitle">Your overall learning performance at a glance</p>
+                </div>
+                
+                <div class="metrics-grid">
+                    <!-- Metric 1 -->
+                    <div class="metric-card">
+                        <div class="metric-icon primary">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="metric-value">148</div>
+                        <div class="metric-label">Total Hours Studied</div>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +12% from last month
+                        </div>
+                    </div>
+                    
+                    <!-- Metric 2 -->
+                    <div class="metric-card">
+                        <div class="metric-icon success">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="metric-value">78%</div>
+                        <div class="metric-label">Overall Completion Rate</div>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +5% from last month
+                        </div>
+                    </div>
+                    
+                    <!-- Metric 3 -->
+                    <div class="metric-card">
+                        <div class="metric-icon warning">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="metric-value">84%</div>
+                        <div class="metric-label">Average Quiz Score</div>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +2% from last month
+                        </div>
+                    </div>
+                    
+                    <!-- Metric 4 -->
+                    <div class="metric-card">
+                        <div class="metric-icon secondary">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="metric-value">24</div>
+                        <div class="metric-label">Active Learning Streak (Days)</div>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +3 from last week
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Goal Setting Widget -->
+                <div class="goal-widget card">
+                    <div class="goal-header">
+                        <h3><i class="fas fa-bullseye"></i> Goal Setting</h3>
+                        <button class="btn btn-sm btn-primary" onclick="showGoalModal()">Set New Goal</button>
+                    </div>
+                    <div class="goal-content">
+                        <div class="goal-item">
+                            <div class="goal-info">
+                                <h4>Complete 2 courses by year-end</h4>
+                                <p>Deadline: Dec 31, 2024</p>
+                            </div>
+                            <div class="goal-progress">
+                                <div class="progress">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                                <span class="progress-text">65% Complete</span>
+                            </div>
+                        </div>
+                        <div class="goal-item">
+                            <div class="goal-info">
+                                <h4>Master JavaScript Advanced Concepts</h4>
+                                <p>Deadline: Ongoing</p>
+                            </div>
+                            <div class="goal-progress">
+                                <div class="progress">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                                <span class="progress-text">80% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Activity Chart -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="chart-header">
+                    <h2>Learning Activity Timeline</h2>
+                    <div class="chart-controls">
+                        <select class="form-control" onchange="updateChartView()">
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly" selected>Monthly</option>
+                            <option value="all">All Time</option>
+                        </select>
+                        <select class="form-control" onchange="updateChartView()">
+                            <option value="time">Time Spent (hours)</option>
+                            <option value="modules">Modules Completed</option>
+                            <option value="assessments">Assessment Attempts</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Chart Visualization (CSS-based) -->
+                <div class="chart-visualization">
+                    <div class="chart-labels">
+                        <span>Jan</span>
+                        <span>Feb</span>
+                        <span>Mar</span>
+                        <span>Apr</span>
+                        <span>May</span>
+                        <span>Jun</span>
+                        <span>Jul</span>
+                    </div>
+                    <div class="chart-bars">
+                        <div class="chart-bar" style="height: 40%;" data-value="12"></div>
+                        <div class="chart-bar" style="height: 63%;" data-value="19"></div>
+                        <div class="chart-bar" style="height: 50%;" data-value="15"></div>
+                        <div class="chart-bar" style="height: 83%;" data-value="25"></div>
+                        <div class="chart-bar" style="height: 73%;" data-value="22"></div>
+                        <div class="chart-bar" style="height: 100%;" data-value="30"></div>
+                        <div class="chart-bar" style="height: 93%;" data-value="28"></div>
+                    </div>
+                    <div class="chart-line"></div>
+                    <div class="chart-tooltip"></div>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: var(--primary-color);"></span>
+                        <span>Hours Studied</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Breakdown -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Course-Specific Breakdown</h2>
+                    <p class="section-subtitle">Detailed progress for each enrolled course</p>
+                </div>
+                
+                <div class="courses-container">
+                    <!-- Course 1 -->
+                    <div class="course-card">
+                        <div class="course-header">
+                            <div class="course-title">
+                                <i class="fas fa-book"></i>
+                                <h3>Advanced JavaScript</h3>
+                                <span class="course-badge badge-success">In Progress</span>
+                            </div>
+                            <div class="course-stats">
+                                <span class="stat"><i class="fas fa-percentage"></i> 75% Complete</span>
+                                <span class="stat"><i class="fas fa-calendar"></i> Last: 2 days ago</span>
+                                <span class="stat"><i class="fas fa-grade"></i> Grade: B+</span>
+                            </div>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="course-modules">
+                            <h4>Module Progress</h4>
+                            <div class="module-list">
+                                <div class="module-item complete">
+                                    <span>ES6 Features</span>
+                                    <span>100%</span>
+                                </div>
+                                <div class="module-item complete">
+                                    <span>Async Programming</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="module-item in-progress">
+                                    <span>Design Patterns</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="module-item in-progress">
+                                    <span>Performance Optimization</span>
+                                    <span>50%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-sm btn-primary" onclick="viewCourseDetails('javascript')">
+                                <i class="fas fa-chart-bar"></i> View Detailed Report
+                            </button>
+                            <button class="btn btn-sm btn-outline1">
+                                <i class="fas fa-play-circle"></i> Continue Learning
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Course 2 -->
+                    <div class="course-card">
+                        <div class="course-header">
+                            <div class="course-title">
+                                <i class="fas fa-server"></i>
+                                <h3>Full Stack Development</h3>
+                                <span class="course-badge badge-warning">Needs Attention</span>
+                            </div>
+                            <div class="course-stats">
+                                <span class="stat"><i class="fas fa-percentage"></i> 45% Complete</span>
+                                <span class="stat"><i class="fas fa-calendar"></i> Last: 1 week ago</span>
+                                <span class="stat"><i class="fas fa-grade"></i> Grade: A-</span>
+                            </div>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="course-modules">
+                            <h4>Module Progress</h4>
+                            <div class="module-list">
+                                <div class="module-item complete">
+                                    <span>Frontend Fundamentals</span>
+                                    <span>100%</span>
+                                </div>
+                                <div class="module-item complete">
+                                    <span>Backend with Node.js</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="module-item in-progress">
+                                    <span>Database Design</span>
+                                    <span>40%</span>
+                                </div>
+                                <div class="module-item not-started">
+                                    <span>Deployment</span>
+                                    <span>0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-sm btn-primary" onclick="viewCourseDetails('fullstack')">
+                                <i class="fas fa-chart-bar"></i> View Detailed Report
+                            </button>
+                            <button class="btn btn-sm btn-outline1">
+                                <i class="fas fa-play-circle"></i> Continue Learning
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Course 3 -->
+                    <div class="course-card">
+                        <div class="course-header">
+                            <div class="course-title">
+                                <i class="fas fa-shield-alt"></i>
+                                <h3>Cloud Security</h3>
+                                <span class="course-badge badge-primary">Almost Complete</span>
+                            </div>
+                            <div class="course-stats">
+                                <span class="stat"><i class="fas fa-percentage"></i> 90% Complete</span>
+                                <span class="stat"><i class="fas fa-calendar"></i> Last: Yesterday</span>
+                                <span class="stat"><i class="fas fa-grade"></i> Grade: A</span>
+                            </div>
+                        </div>
+                        <div class="course-progress">
+                            <div class="progress">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="course-modules">
+                            <h4>Module Progress</h4>
+                            <div class="module-list">
+                                <div class="module-item complete">
+                                    <span>Cloud Fundamentals</span>
+                                    <span>100%</span>
+                                </div>
+                                <div class="module-item complete">
+                                    <span>IAM & Access Control</span>
+                                    <span>100%</span>
+                                </div>
+                                <div class="module-item complete">
+                                    <span>Network Security</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="module-item in-progress">
+                                    <span>Compliance Standards</span>
+                                    <span>75%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-sm btn-primary" onclick="viewCourseDetails('cloud')">
+                                <i class="fas fa-chart-bar"></i> View Detailed Report
+                            </button>
+                            <button class="btn btn-sm btn-outline1">
+                                <i class="fas fa-play-circle"></i> Continue Learning
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Proficiency -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Skill Proficiency Tracker</h2>
+                    <p class="section-subtitle">Your competency across different skill areas</p>
+                </div>
+                
+                <div class="skills-container">
+                    <!-- Skill Radar Visualization (CSS-based) -->
+                    <div class="skill-radar">
+                        <div class="radar-grid">
+                            <div class="grid-line"></div>
+                            <div class="grid-line"></div>
+                            <div class="grid-line"></div>
+                        </div>
+                        <div class="radar-skills">
+                            <div class="skill-point" style="--angle: 0deg; --distance: 85%;" data-skill="JavaScript" data-value="85"></div>
+                            <div class="skill-point" style="--angle: 51deg; --distance: 75%;" data-skill="React" data-value="75"></div>
+                            <div class="skill-point" style="--angle: 103deg; --distance: 70%;" data-skill="Node.js" data-value="70"></div>
+                            <div class="skill-point" style="--angle: 154deg; --distance: 60%;" data-skill="Database" data-value="60"></div>
+                            <div class="skill-point" style="--angle: 206deg; --distance: 55%;" data-skill="Cloud" data-value="55"></div>
+                            <div class="skill-point" style="--angle: 257deg; --distance: 45%;" data-skill="Security" data-value="45"></div>
+                            <div class="skill-point" style="--angle: 309deg; --distance: 80%;" data-skill="UI/UX" data-value="80"></div>
+                        </div>
+                        <div class="skill-labels">
+                            <span class="label" style="--angle: 0deg;">JavaScript</span>
+                            <span class="label" style="--angle: 51deg;">React</span>
+                            <span class="label" style="--angle: 103deg;">Node.js</span>
+                            <span class="label" style="--angle: 154deg;">Database</span>
+                            <span class="label" style="--angle: 206deg;">Cloud</span>
+                            <span class="label" style="--angle: 257deg;">Security</span>
+                            <span class="label" style="--angle: 309deg;">UI/UX</span>
+                        </div>
+                        <div class="radar-area"></div>
+                    </div>
+                    
+                    <!-- Skill Details -->
+                    <div class="skill-details">
+                        <h3>Skill Breakdown</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-value">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-value">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-value">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Database Design</span>
+                                    <span class="skill-value">60%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Cloud Computing</span>
+                                    <span class="skill-value">55%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 55%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Performance -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Assessment Performance Analysis</h2>
+                    <p class="section-subtitle">Detailed analysis of your test performances</p>
+                </div>
+                
+                <div class="assessment-cards">
+                    <!-- Assessment 1 -->
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <h4>JavaScript Fundamentals</h4>
+                            <span class="score-badge excellent">92%</span>
+                        </div>
+                        <div class="assessment-details">
+                            <div class="detail">
+                                <span class="label">Attempts:</span>
+                                <span class="value">1</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Time Taken:</span>
+                                <span class="value">45 min</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Weakness Area:</span>
+                                <span class="weakness-tag">Closures & Scope</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-outline1" onclick="analyzeAssessment('JavaScript Fundamentals')">
+                            Analyze Misconceptions
+                        </button>
+                    </div>
+                    
+                    <!-- Assessment 2 -->
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <h4>React Hooks</h4>
+                            <span class="score-badge good">78%</span>
+                        </div>
+                        <div class="assessment-details">
+                            <div class="detail">
+                                <span class="label">Attempts:</span>
+                                <span class="value">2</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Time Taken:</span>
+                                <span class="value">60 min</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Weakness Area:</span>
+                                <span class="weakness-tag">useEffect Dependencies</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-outline1" onclick="analyzeAssessment('React Hooks')">
+                            Analyze Misconceptions
+                        </button>
+                    </div>
+                    
+                    <!-- Assessment 3 -->
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <h4>Database Optimization</h4>
+                            <span class="score-badge fair">65%</span>
+                        </div>
+                        <div class="assessment-details">
+                            <div class="detail">
+                                <span class="label">Attempts:</span>
+                                <span class="value">3</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Time Taken:</span>
+                                <span class="value">75 min</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Weakness Area:</span>
+                                <span class="weakness-tag">Indexing Strategies</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-outline1" onclick="analyzeAssessment('Database Optimization')">
+                            Analyze Misconceptions
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Personalized Recommendations</h2>
+                    <p class="section-subtitle">Based on your analytics and performance</p>
+                </div>
+                
+                <div class="recommendations-grid">
+                    <!-- Recommendation 1 -->
+                    <div class="recommendation-card">
+                        <div class="recommendation-icon lab">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h4>Advanced JavaScript Patterns Lab</h4>
+                        <p>Based on your performance in design patterns module</p>
+                        <button class="btn btn-sm btn-primary" onclick="startLab('Advanced JavaScript Patterns')">
+                            Start Lab
+                        </button>
+                    </div>
+                    
+                    <!-- Recommendation 2 -->
+                    <div class="recommendation-card">
+                        <div class="recommendation-icon module">
+                            <i class="fas fa-redo"></i>
+                        </div>
+                        <h4>Revisit: Database Indexing</h4>
+                        <p>Improve your database optimization skills</p>
+                        <button class="btn btn-sm btn-primary" onclick="revisitModule('Database Indexing')">
+                            Revisit Module
+                        </button>
+                    </div>
+                    
+                    <!-- Recommendation 3 -->
+                    <div class="recommendation-card">
+                        <div class="recommendation-icon course">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>Advanced Cloud Security</h4>
+                        <p>Build on your cloud security foundation</p>
+                        <button class="btn btn-sm btn-primary" onclick="viewCourse('Advanced Cloud Security')">
+                            View Course
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== MODAL ==================== -->
+    <div class="overlay" id="goalModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Set New Learning Goal</h3>
+                <button class="btn btn-sm" onclick="closeGoalModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Goal Title</label>
+                    <input type="text" class="form-control" placeholder="e.g., Complete Python Course">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Target Completion Date</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-control" rows="3" placeholder="Describe your learning goal..."></textarea>
+                </div>
+                <button class="btn btn-primary w-full" onclick="saveGoal()">Save Goal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Learning Section -->
+                <div class="footer-section">
+                    <h3>Learning</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-catalog.html">Course Catalog</a></li>
+                        <li><a href="learning-path.html">Learning Paths</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="practice-labs.html">Practice Labs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">Help Center (FAQ)</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog & Resources</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Section -->
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillSync</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2024 SkillSync. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/analytics.js"></script>
+</body>
+</html>

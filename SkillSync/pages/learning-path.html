@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path - SkillSync</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/learning-path.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="learning-path.html" class="logo">
+                    <i class="fas fa-graduation-cap fa-lg"></i>
+                    <span>SkillSync</span>
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="learning-path.html" class="nav-link">Learning Path</a></li>
+                    <li><a href="practice-labs.html" class="nav-link">Practice Labs</a></li>
+                    <li><a href="quiz.html" class="nav-link">Quizzes</a></li>
+                    <li><a href="course-catalog.html" class="nav-link">Course Catalog</a></li>
+                </ul>
+
+                <!-- Navigation Actions -->
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="user-actions">
+                        <div class="user-dropdown" id="userDropdown">
+                            <div class="user-avatar" id="avatarTrigger">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="User Avatar">
+                            </div>
+                            <!-- dropdown menu -->
+                            <div class="dropdown-menu">
+                                <a href="profile.html" class="dropdown-item"><i class="fas fa-user"></i> My Profile</a>
+                                <a href="settings.html" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="notifications.html" class="dropdown-item"><i class="fas fa-bell"></i> Notifications</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+            
+            <!-- Mobile slide-out overlay (hidden by default) -->
+            <div class="mobile-nav-overlay" id="mobileOverlay">
+                <div class="mobile-nav-panel">
+                    <button class="close-mobile-btn" id="closeMobileBtn" aria-label="close"><i class="fas fa-times"></i></button>
+                    
+                    <!-- Mobile navigation links (full list) -->
+                    <ul class="mobile-nav-links">
+                        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                        <li><a href="learning-path.html" class="nav-link">Learning Path</a></li>
+                        <li><a href="practice-labs.html" class="nav-link">Practice Labs</a></li>
+                        <li><a href="quiz.html" class="nav-link">Quizzes</a></li>
+                        <li><a href="course-catalog.html" class="nav-link">Course Catalog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Curated Learning Paths for Career Mastery</h1>
+                    <p>Structured roadmaps designed by industry experts to transform your skills into career success</p>
+                    
+                    <div class="path-discovery">
+                        <div class="search-section">
+                            <div class="search-wrapper">
+                                <i class="fas fa-search"></i>
+                                <input type="text" 
+                                       class="search-input" 
+                                       id="pathSearch"
+                                       placeholder="Find your path (e.g., 'Front-End Developer', 'Data Analyst')">
+                                <button class="search-btn-submit">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="category-filters">
+                            <h3>Browse by Category</h3>
+                            <div class="categories-grid">
+                                <button class="category-card active" data-category="all">
+                                    <div class="category-icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <span>All Paths</span>
+                                </button>
+                                <button class="category-card" data-category="technology">
+                                    <div class="category-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <span>Technology</span>
+                                </button>
+                                <button class="category-card" data-category="creative">
+                                    <div class="category-icon">
+                                        <i class="fas fa-paint-brush"></i>
+                                    </div>
+                                    <span>Creative</span>
+                                </button>
+                                <button class="category-card" data-category="business">
+                                    <div class="category-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <span>Business</span>
+                                </button>
+                                <button class="category-card" data-category="data">
+                                    <div class="category-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <span>Data Science</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Active Paths -->
+        <section class="section active-paths">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-road"></i> My Active Paths</h2>
+                    <a href="dashboard.html" class="view-all">
+                        View All <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="paths-carousel">
+                    <div class="carousel-track">
+                        <!-- Path 1 -->
+                        <div class="path-card active">
+                            <div class="path-header">
+                                <div class="path-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <div>
+                                    <h3>The Complete Cloud Architect</h3>
+                                    <div class="path-meta">
+                                        <span><i class="fas fa-book"></i> 8 Courses</span>
+                                        <span><i class="fas fa-clock"></i> 120 Hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="path-progress">
+                                <div class="progress-info">
+                                    <span>Progress</span>
+                                    <span>45%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="next-action">
+                                <p><i class="fas fa-arrow-right"></i> Next: AWS Networking & VPC</p>
+                                <p>Master virtual private cloud setup</p>
+                            </div>
+                            
+                            <button class="btn btn-primary continue-btn" data-path="cloud">
+                                <i class="fas fa-play"></i> Continue Path
+                            </button>
+                        </div>
+                        
+                        <!-- Path 2 -->
+                        <div class="path-card active">
+                            <div class="path-header">
+                                <div class="path-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div>
+                                    <h3>Data Science Professional</h3>
+                                    <div class="path-meta">
+                                        <span><i class="fas fa-book"></i> 12 Courses</span>
+                                        <span><i class="fas fa-clock"></i> 180 Hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="path-progress">
+                                <div class="progress-info">
+                                    <span>Progress</span>
+                                    <span>25%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 25%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="next-action">
+                                <p><i class="fas fa-arrow-right"></i> Next: Machine Learning Basics</p>
+                                <p>Introduction to supervised learning</p>
+                            </div>
+                            
+                            <button class="btn btn-primary continue-btn" data-path="data-science">
+                                <i class="fas fa-play"></i> Continue Path
+                            </button>
+                        </div>
+                        
+                        <!-- Path 3 -->
+                        <div class="path-card active">
+                            <div class="path-header">
+                                <div class="path-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div>
+                                    <h3>Full-Stack Web Developer</h3>
+                                    <div class="path-meta">
+                                        <span><i class="fas fa-book"></i> 10 Courses</span>
+                                        <span><i class="fas fa-clock"></i> 150 Hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="path-progress">
+                                <div class="progress-info">
+                                    <span>Progress</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="next-action">
+                                <p><i class="fas fa-arrow-right"></i> Next: React & Redux Mastery</p>
+                                <p>State management patterns</p>
+                            </div>
+                            
+                            <button class="btn btn-primary continue-btn" data-path="web">
+                                <i class="fas fa-play"></i> Continue Path
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Paths -->
+        <section class="section featured-paths">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-star"></i> Featured & Recommended Paths</h2>
+                    
+                    <div class="path-filters">
+                        <button class="filter-btn active" data-filter="trending">Trending</button>
+                        <button class="filter-btn" data-filter="beginner">Beginner</button>
+                        <button class="filter-btn" data-filter="advanced">Advanced</button>
+                        <button class="filter-btn" data-filter="career">Career</button>
+                    </div>
+                </div>
+                
+                <div class="paths-grid">
+                    <!-- Path 1 -->
+                    <div class="featured-path-card" data-category="technology" data-filter="trending career">
+                        <div class="path-image">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Web Development">
+                            <div class="category-badge">Technology</div>
+                        </div>
+                        
+                        <div class="path-content">
+                            <h3>Front-End Developer</h3>
+                            
+                            <div class="path-info">
+                                <p><i class="fas fa-briefcase"></i> Target: Front-End Developer</p>
+                                <p><i class="fas fa-clock"></i> 4-6 Months</p>
+                            </div>
+                            
+                            <div class="skills">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <!-- <span>React</span> -->
+                                <!-- <span>Responsive</span> -->
+                            </div>
+                            
+                            <div class="prerequisites">
+                                <p><strong>Prerequisites:</strong> Basic computer skills</p>
+                            </div>
+                            
+                            <div class="path-stats">
+                                <div class="stat">
+                                    <div class="number">8</div>
+                                    <div class="label">Courses</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">120</div>
+                                    <div class="label">Hours</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">5</div>
+                                    <div class="label">Projects</div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary view-btn" data-path="frontend">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Path 2 -->
+                    <div class="featured-path-card" data-category="data" data-filter="trending career beginner">
+                        <div class="path-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Data Science">
+                            <div class="category-badge">Data Science</div>
+                        </div>
+                        
+                        <div class="path-content">
+                            <h3>Data Analyst</h3>
+                            
+                            <div class="path-info">
+                                <p><i class="fas fa-briefcase"></i> Target: Data Analyst</p>
+                                <p><i class="fas fa-clock"></i> 3-5 Months</p>
+                            </div>
+                            
+                            <div class="skills">
+                                <span>Python</span>
+                                <span>SQL</span>
+                                <span>Excel</span>
+                                <span>Tableau</span>
+                                <span>Statistics</span>
+                            </div>
+                            
+                            <div class="prerequisites">
+                                <p><strong>Prerequisites:</strong> Basic math skills</p>
+                            </div>
+                            
+                            <div class="path-stats">
+                                <div class="stat">
+                                    <div class="number">7</div>
+                                    <div class="label">Courses</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">90</div>
+                                    <div class="label">Hours</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">4</div>
+                                    <div class="label">Projects</div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary view-btn" data-path="analyst">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Path 3 -->
+                    <div class="featured-path-card" data-category="creative" data-filter="trending career">
+                        <div class="path-image">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="UI/UX Design">
+                            <div class="category-badge">Creative</div>
+                        </div>
+                        
+                        <div class="path-content">
+                            <h3>UI/UX Designer</h3>
+                            
+                            <div class="path-info">
+                                <p><i class="fas fa-briefcase"></i> Target: UI/UX Designer</p>
+                                <p><i class="fas fa-clock"></i> 5-7 Months</p>
+                            </div>
+                            
+                            <div class="skills">
+                                <span>Figma</span>
+                                <span>Wireframing</span>
+                                <span>Prototyping</span>
+                                <!-- <span>User Research</span> -->
+                                <!-- <span>Design Systems</span> -->
+                            </div>
+                            
+                            <div class="prerequisites">
+                                <p><strong>Prerequisites:</strong> Creative mindset</p>
+                            </div>
+                            
+                            <div class="path-stats">
+                                <div class="stat">
+                                    <div class="number">9</div>
+                                    <div class="label">Courses</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">140</div>
+                                    <div class="label">Hours</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">6</div>
+                                    <div class="label">Projects</div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary view-btn" data-path="uiux">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Path 4 -->
+                    <div class="featured-path-card" data-category="technology" data-filter="advanced career">
+                        <div class="path-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="DevOps">
+                            <div class="category-badge">Technology</div>
+                        </div>
+                        
+                        <div class="path-content">
+                            <h3>DevOps Engineer</h3>
+                            
+                            <div class="path-info">
+                                <p><i class="fas fa-briefcase"></i> Target: DevOps Engineer</p>
+                                <p><i class="fas fa-clock"></i> 6-8 Months</p>
+                            </div>
+                            
+                            <div class="skills">
+                                <span>Docker</span>
+                                <span>Kubernetes</span>
+                                <span>AWS</span>
+                                <span>CI/CD</span>
+                                <span>Linux</span>
+                                <span>Cloud</span>
+                            </div>
+                            
+                            <div class="prerequisites">
+                                <p><strong>Prerequisites:</strong> Programming basics</p>
+                            </div>
+                            
+                            <div class="path-stats">
+                                <div class="stat">
+                                    <div class="number">10</div>
+                                    <div class="label">Courses</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">160</div>
+                                    <div class="label">Hours</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">5</div>
+                                    <div class="label">Projects</div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary view-btn" data-path="devops">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Path 5 -->
+                    <div class="featured-path-card" data-category="business" data-filter="beginner career">
+                        <div class="path-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Marketing">
+                            <div class="category-badge">Business</div>
+                        </div>
+                        
+                        <div class="path-content">
+                            <h3>Digital Marketing Specialist</h3>
+                            
+                            <div class="path-info">
+                                <p><i class="fas fa-briefcase"></i> Target: Digital Marketer</p>
+                                <p><i class="fas fa-clock"></i> 3-4 Months</p>
+                            </div>
+                            
+                            <div class="skills">
+                                <span>SEO</span>
+                                <span>Social Media</span>
+                                <span>Content</span>
+                                <span>Analytics</span>
+                                <span>Google Ads</span>
+                            </div>
+                            
+                            <div class="prerequisites">
+                                <p><strong>Prerequisites:</strong> No technical background</p>
+                            </div>
+                            
+                            <div class="path-stats">
+                                <div class="stat">
+                                    <div class="number">6</div>
+                                    <div class="label">Courses</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">80</div>
+                                    <div class="label">Hours</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">4</div>
+                                    <div class="label">Projects</div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary view-btn" data-path="marketing">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Path 6 -->
+                    <div class="featured-path-card" data-category="technology" data-filter="advanced">
+                        <div class="path-image">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Cybersecurity">
+                            <div class="category-badge">Technology</div>
+                        </div>
+                        
+                        <div class="path-content">
+                            <h3>Cybersecurity Analyst</h3>
+                            
+                            <div class="path-info">
+                                <p><i class="fas fa-briefcase"></i> Target: Security Analyst</p>
+                                <p><i class="fas fa-clock"></i> 7-9 Months</p>
+                            </div>
+                            
+                            <div class="skills">
+                                <span>Network Security</span>
+                                <span>Ethical Hacking</span>
+                                <span>Cryptography</span>
+                                <span>Risk Assessment</span>
+                                <span>Compliance</span>
+                            </div>
+                            
+                            <div class="prerequisites">
+                                <p><strong>Prerequisites:</strong> Networking basics</p>
+                            </div>
+                            
+                            <div class="path-stats">
+                                <div class="stat">
+                                    <div class="number">11</div>
+                                    <div class="label">Courses</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">180</div>
+                                    <div class="label">Hours</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="number">7</div>
+                                    <div class="label">Projects</div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary view-btn" data-path="security">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Path Builder -->
+        <section class="section path-builder">
+            <div class="container">
+                <div class="builder-content">
+                    <div class="builder-text">
+                        <h2>Don't see your path? Build your own!</h2>
+                        <p>Customize your learning journey by selecting courses that match your specific career goals.</p>
+                        <button class="btn btn-primary btn-lg" id="buildBtn">
+                            <i class="fas fa-plus-circle"></i> Start Building Your Path
+                        </button>
+                    </div>
+                    <div class="builder-image">
+                        <div class="builder-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Path Details Modal -->
+    <div class="modal" id="pathModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Front-End Developer Path</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-summary">
+                    <div class="modal-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Web Development">
+                    </div>
+                    <div class="modal-info">
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <span>Target Role</span>
+                                <span>Front-End Developer</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span>Duration</span>
+                                <span>4-6 Months</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-book"></i>
+                            <div>
+                                <span>Courses</span>
+                                <span>8 Courses</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <span>Certificate</span>
+                                <span>Yes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-outcomes">
+                    <h3>Learning Outcomes</h3>
+                    <ul class="outcomes-list">
+                        <li>Build responsive, mobile-first web applications</li>
+                        <li>Master modern JavaScript (ES6+) and React</li>
+                        <li>Implement state management with Redux</li>
+                        <li>Optimize web performance and accessibility</li>
+                        <li>Deploy applications to production</li>
+                        <li>Collaborate using Git and modern workflows</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-courses">
+                    <h3>Path Curriculum</h3>
+                    <div class="courses-list">
+                        <!-- Courses will be populated here -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline close-btn">
+                    <i class="fas fa-times"></i> Close
+                </button>
+                <button class="btn btn-primary enroll-btn">
+                    <i class="fas fa-play-circle"></i> Enroll in Path
+                </button>
+            </div>
+        </div>
+    </div>
+
+<!-- ==================== FOOTER SECTION ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Section -->
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Learning Section -->
+                <div class="footer-section">
+                    <h3>Learning</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-catalog.html">Course Catalog</a></li>
+                        <li><a href="learning-path.html">Learning Paths</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="practice-labs.html">Practice Labs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Section -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">Help Center (FAQ)</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog & Resources</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Section -->
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillSync</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2024 SkillSync. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/learning-path.js"></script>
+</body>
+</html>
