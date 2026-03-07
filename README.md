@@ -119,11 +119,8 @@ SkillSync
 │   │   └── auth.js
 │
 │   └── images
-│       ├── logo.png
-│       ├── hero.jpg
-│       ├── courses
-│       └── icons
-│
+│       └── logo.png
+│ 
 └── README.md
 ```
 
